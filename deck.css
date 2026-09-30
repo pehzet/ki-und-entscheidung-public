@@ -33,6 +33,7 @@
   white-space: nowrap;
 }
 .hero-qr img { display: block; width: 176px; height: 176px; background: #fff; }
+.hero-qr span { font-size: var(--tiny); }
 
 .opening-question .statement { max-width: 1650px; }
 
