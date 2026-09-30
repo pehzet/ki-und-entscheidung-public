@@ -1,0 +1,18 @@
+{
+  "files": [
+    ".gitignore",
+    ".nojekyll",
+    "deck.css",
+    "deck.js",
+    "draw.js",
+    "fonts/RobotoMono-Regular.woff2",
+    "img/cognitive-bias-codex-1920.png",
+    "img/entscheidung-lebensmittelproduktion.jpg",
+    "index.html",
+    "ki-und-entscheidung.html",
+    "ki-und-entscheidung.pdf",
+    "stagekit.css",
+    "stagekit.js",
+    "theme.css"
+  ]
+}

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KI und Entscheidung</title>
+  <link rel="stylesheet" href="theme.css?v=20260929-38">
+  <link rel="stylesheet" href="stagekit.css?v=20260929-38">
+  <link rel="stylesheet" href="deck.css?v=20260929-38">
+</head>
+<body>
+<div class="deck" data-title="KI und Entscheidung"
+     data-subtitle="Hochschule Osnabrück · Philipp Zmijewski · 2026"
+     data-parts='["Entscheidung","KI","Mensch und KI"]'>
+
+  <section class="slide title hero">
+    <img class="photo" src="img/entscheidung-lebensmittelproduktion.jpg"
+         alt="Qualitätsverantwortliche Person vor einer Entscheidung in der Lebensmittelproduktion">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <div class="title-text">KI und<br>Entscheidung</div>
+      <div class="subtitle-text">Wie Mensch und KI gemeinsam Entscheidungen treffen</div>
+      <div class="hero-meta">Philipp Zmijewski<br>Hochschule Osnabrück · 2026</div>
+    </div>
+    <div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div>
+    
+  </section>
+
+  <section class="slide opening-question">
+    <div class="content center">
+      <div class="statement">Wann würdet ihr einer KI<br>eine Entscheidung überlassen?</div>
+    </div>
+    
+  </section>
+
+  <section class="slide usage-question">
+    <h2>Wo nutzt ihr KI heute schon?</h2>
+    <div class="usage-grid">
+      <div class="usage-item">
+        <div class="usage-icon" id="icon-create" aria-hidden="true"></div>
+        <div class="usage-label">Erzeugen</div>
+        <div class="usage-text">Wofür nutzt ihr generative KI?</div>
+      </div>
+      <div class="usage-item">
+        <div class="usage-icon" id="icon-recommend" aria-hidden="true"></div>
+        <div class="usage-label">Empfehlen</div>
+        <div class="usage-text">Wo lasst ihr euch Empfehlungen geben?</div>
+      </div>
+      <div class="usage-item">
+        <div class="usage-icon" id="icon-check" aria-hidden="true"></div>
+        <div class="usage-label">Prüfen</div>
+        <div class="usage-text">Wo prüft ihr die Antwort besonders kritisch?</div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide action-scope">
+    <h2>Vom Text zur Handlung</h2>
+    <div class="figure" id="fig-action-scope"></div>
+    <div class="punch">Je mehr ein System selbst tut, desto klarer müssen Grenzen und Eingriffspunkte sein.</div>
+    <div class="footnote">Nach Parasuraman, Sheridan &amp; Wickens (2000); Anthropic (2024)</div>
+    
+  </section>
+
+  <section class="slide learning-journey">
+    <h2>Unser Weg durch den Tag</h2>
+    <div class="figure" id="fig-learning-journey"></div>
+    
+  </section>
+
+  <section class="slide part part-choice" data-part="Entscheidung">
+    <div class="content">
+      <div class="part-n">Block 1</div>
+      <div class="part-text">Was ist eigentlich<br>eine Entscheidung?</div>
+      <div class="part-subtitle">Warum eine gute Prognose noch keine gute Entscheidung ist.</div>
+    </div>
+    <div class="part-figure" id="fig-choice"></div>
+    
+  </section>
+
+  <section class="slide choice-definition">
+    <h2>Eine Entscheidung ist eine Auswahl</h2>
+    <div class="content">
+      <div class="statement">Eine Entscheidung wählt eine von mehreren möglichen Handlungen.</div>
+    </div>
+    <div class="part-figure" id="fig-choice-selected"></div>
+    
+  </section>
+
+  <section class="slide goal-slide has-punch">
+    <h2>Entscheidungen brauchen ein Ziel</h2>
+    <div class="figure" id="fig-goals"></div>
+    <div class="punch">Ohne Ziel lässt sich keine Alternative sinnvoll bewerten.</div>
+    
+  </section>
+
+  <section class="slide alternatives-slide">
+    <h2>Entscheidungen brauchen Alternativen</h2>
+    <div class="figure" id="fig-alternatives"></div>
+    
+  </section>
+
+  <section class="slide information-slide">
+    <h2>Information ist noch keine Entscheidung</h2>
+    <div class="figure" id="fig-information"></div>
+    
+  </section>
+
+  <section class="slide prediction-slide">
+    <h2>Was ist eine Prognose?</h2>
+    <div class="prediction-statement">Eine Prognose schätzt, was wir noch nicht wissen.</div>
+    <div class="figure" id="fig-prediction"></div>
+    <div class="prediction-example">Das Modell schätzt: 20 % Wahrscheinlichkeit für einen Qualitätsmangel.</div>
+    
+  </section>
+
+  <section class="slide judgment-slide has-punch">
+    <h2>Was ist Bewertung?</h2>
+    <div class="figure" id="fig-judgment"></div>
+    <div class="punch">Ein möglicher Gesundheitsschaden wiegt schwerer als zusätzliche Lagerkosten.</div>
+    
+  </section>
+
+  <section class="slide alternatives-slide decision-slide">
+    <h2>Was ist die Entscheidung?</h2>
+    <div class="figure" id="fig-decision"></div>
+    <div class="decision-caption">Die Charge wird bis zur Wiederholungsmessung gesperrt.</div>
+    
+  </section>
+
+  <section class="slide distinction-slide">
+    <h2>Prognose ≠ Bewertung ≠ Entscheidung</h2>
+    <div class="figure" id="fig-distinction"></div>
+    
+  </section>
+
+  <section class="slide anatomy-slide">
+    <h2>Die Anatomie einer Entscheidung</h2>
+    <div class="figure" id="fig-anatomy"></div>
+    
+  </section>
+
+  <section class="slide certainty-slide">
+    <h2>Entscheiden ohne Gewissheit</h2>
+    <div class="figure" id="fig-certainty"></div>
+    
+  </section>
+
+  <section class="slide bounded-slide">
+    <h2>Begrenzte Rationalität</h2>
+    <div class="figure" id="fig-bounded"></div>
+    
+  </section>
+
+  <section class="slide satisficing-slide">
+    <h2>Satisficing</h2>
+    <div class="figure" id="fig-satisficing"></div>
+    <div class="satisficing-caption">Die Suche endet bei einer ausreichend guten Option.</div>
+    
+  </section>
+
+  <section class="slide heuristic-slide">
+    <h2>Was ist eine Heuristik?</h2>
+    <div class="figure" id="fig-heuristic"></div>
+    <div class="heuristic-caption">Eine Heuristik ist eine vereinfachende Urteilsregel.</div>
+    
+  </section>
+
+  <section class="slide bias-slide">
+    <h2>Was ist ein Bias?</h2>
+    <div class="figure" id="fig-bias"></div>
+    <div class="bias-caption">Nachfrage wird wiederholt zu optimistisch eingeschätzt.</div>
+    
+  </section>
+
+  <section class="slide bias-codex-slide">
+    <h2>Viele Arten von Bias</h2>
+    <a class="bias-codex-open" href="https://commons.wikimedia.org/wiki/File:Cognitive_bias_codex_en.svg" target="_blank" rel="noopener noreferrer">Original erkunden ↗</a>
+    <img class="bias-codex-image" src="img/cognitive-bias-codex-1920.png" alt="Cognitive Bias Codex: kreisförmige Übersicht zahlreicher kognitiver Verzerrungen in vier Gruppen">
+    <div class="bias-codex-credit">J. Manoogian III · B. Benson · TilmannR · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · unverändert, lokal als PNG eingebunden</div>
+    
+  </section>
+
+  <section class="slide noise-slide">
+    <h2>Was ist Noise?</h2>
+    <div class="figure" id="fig-noise"></div>
+    <div class="noise-caption">Dieselbe Charge – unterschiedliche Urteile.</div>
+    
+  </section>
+
+  <section class="slide summary-slide">
+    <h2>Heuristik, Bias und Noise</h2>
+    <table class="concept-table" aria-label="Unterschied zwischen Heuristik, Bias und Noise">
+      <thead><tr><th>Begriff</th><th>Bedeutung</th><th>Einordnung</th></tr></thead>
+      <tbody>
+        <tr><td>Heuristik</td><td>Vereinfachende Regel</td><td>Kann nützlich sein</td></tr>
+        <tr><td>Bias</td><td>Systematische Verzerrung</td><td>Problematisch</td></tr>
+        <tr><td>Noise</td><td>Unerwünschte Streuung</td><td>Problematisch</td></tr>
+      </tbody>
+    </table>
+    
+  </section>
+
+  <section class="slide availability-slide">
+    <h2>Verfügbarkeit: Was fällt uns leicht ein?</h2>
+    <div class="figure" id="fig-availability"></div>
+    <div class="concept-caption">Leicht erinnerbare Ereignisse können wahrscheinlicher wirken.</div>
+    
+  </section>
+
+  <section class="slide anchoring-slide">
+    <h2>Ankern: Die erste Zahl bleibt hängen</h2>
+    <div class="figure" id="fig-anchoring"></div>
+    <div class="concept-caption">Ein Ausgangswert kann spätere Einschätzungen beeinflussen.</div>
+    
+  </section>
+
+  <section class="slide process-outcome-slide">
+    <h2>Gute Entscheidung oder gutes Ergebnis?</h2>
+    <div class="figure" id="fig-process-outcome"></div>
+    <div class="concept-caption">Ein gutes Ergebnis beweist keinen guten Entscheidungsprozess.</div>
+    
+  </section>
+
+  <section class="slide outcome-bias-slide">
+    <h2>Outcome Bias</h2>
+    <div class="figure" id="fig-outcome-bias"></div>
+    <div class="concept-caption">Das spätere Ergebnis färbt das Urteil über die frühere Entscheidung.</div>
+    
+  </section>
+
+  <section class="slide yogurt-case-slide">
+    <h2>Fallstudie: Die auffällige Joghurtcharge</h2>
+    <div class="case-story">
+      <p>Ihr seid die Produktionsleitung eines mittelständischen Molkereiunternehmens. Am Vormittag wurden 40.000 Becher Naturjoghurt produziert. Die Ware soll noch am selben Nachmittag an mehrere Handelsunternehmen ausgeliefert werden.</p>
+      <p>Bei einer routinemäßigen Qualitätskontrolle liegt ein Messwert knapp außerhalb des unternehmensinternen Zielbereichs. Der gesetzliche Grenzwert wird nicht überschritten. Die Abweichung könnte auf ein Qualitätsproblem hindeuten, kann aber auch durch einen Messfehler entstanden sein.</p>
+      <p>Eine Wiederholungsmessung würde voraussichtlich vier Stunden dauern. Dadurch könnte die geplante Auslieferung nicht mehr rechtzeitig erfolgen. Eine Verzögerung würde zusätzliche Lager- und Transportkosten verursachen. Außerdem könnten einzelne Kunden kurzfristig nicht vollständig beliefert werden.</p>
+      <p>Ihr müsst innerhalb der nächsten 30 Minuten entscheiden.</p>
+    </div>
+    <div class="case-footnote">Didaktisch konstruierter Fall</div>
+    
+  </section>
+
+  <section class="slide yogurt-options-slide">
+    <h2>Handlungsoptionen</h2>
+    <div class="option-grid">
+      <div class="option-card"><div class="option-label">A</div><div>Die Charge wird wie geplant ausgeliefert.</div></div>
+      <div class="option-card"><div class="option-label">B</div><div>Die Auslieferung wird gestoppt, bis das Ergebnis der Wiederholungsmessung vorliegt.</div></div>
+      <div class="option-card"><div class="option-label">C</div><div>Es wird sofort eine zusätzliche Schnellprüfung durchgeführt. Diese liefert nach 30 Minuten ein Ergebnis, ist aber weniger zuverlässig als die reguläre Wiederholungsmessung.</div></div>
+    </div>
+    
+  </section>
+
+  <section class="slide yogurt-task-slide">
+    <h2>Eure Entscheidung in 15 Minuten</h2>
+    <div class="task-grid">
+      <div class="task-card"><div class="task-n">1</div><div>Was ist euer Ziel?</div><div>Was wisst ihr?</div></div>
+      <div class="task-card"><div class="task-n">2</div><div>Was ist unsicher?</div><div>Welche Prognosen braucht ihr?</div></div>
+      <div class="task-card"><div class="task-n">3</div><div>Welche Folgen bewertet ihr?</div><div>Welche Handlung wählt ihr?</div></div>
+    </div>
+    <div class="task-instruction">Haltet eure Handlung und die Begründung fest.</div>
+    
+  </section>
+
+  <section class="slide debrief-slide">
+    <h2>Was machte die Entscheidung schwierig?</h2>
+    <div class="figure" id="fig-debrief"></div>
+    
+  </section>
+
+  <section class="slide block-one-takeaway">
+    <h2>Kerngedanke von Block 1</h2>
+    <div class="block-one-statement">Entscheidungen sind mehr als Prognosen.<br>Sie verbinden Information mit Zielen,<br>Bewertung, Handlungswahl und Verantwortung.</div>
+    <div class="figure" id="fig-block-one-takeaway"></div>
+    
+  </section>
+
+  <section class="slide reading-slide">
+    <h2>Weiterlesen: Wie Menschen entscheiden</h2>
+    <div class="reading-grid">
+      <div class="reading-column">
+        <div class="reading-heading">Einstieg</div>
+        <a href="https://doi.org/10.2307/1884852" target="_blank" rel="noopener noreferrer">Simon (1955)<span>Begrenzte Rationalität und Satisficing</span></a>
+        <a href="https://doi.org/10.1126/science.185.4157.1124" target="_blank" rel="noopener noreferrer">Tversky &amp; Kahneman (1974)<span>Heuristiken und Biases</span></a>
+      </div>
+      <div class="reading-column">
+        <div class="reading-heading">Vertiefung</div>
+        <a href="https://doi.org/10.1146/annurev-psych-120709-145346" target="_blank" rel="noopener noreferrer">Gigerenzer &amp; Gaissmaier (2011)<span>Adaptive Heuristiken</span></a>
+        <a href="https://www.hachettebookgroup.com/titles/daniel-kahneman/noise/9780316451390/" target="_blank" rel="noopener noreferrer">Kahneman, Sibony &amp; Sunstein (2021)<span>Noise</span></a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3367280/" target="_blank" rel="noopener noreferrer">Baron &amp; Hershey (1988)<span>Outcome Bias</span></a>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide part part-tech" data-part="KI">
+    <div class="content">
+      <div class="part-n">Block 2</div>
+      <div class="part-text">Was kann KI<br>eigentlich?</div>
+      <div class="part-subtitle">Von festen Regeln zu generativen Modellen.</div>
+    </div>
+    <div class="part-figure" id="fig-tech-divider"></div>
+    
+  </section>
+
+  <section class="slide ai-definitions-slide">
+    <h2>Was meinen wir mit KI?</h2>
+    <div class="definition-grid">
+      <div class="definition-card">
+        <div class="definition-kind">Systemperspektive · OECD</div>
+        <div class="definition-text">Ein KI-System verarbeitet Eingaben und leitet daraus für bestimmte Ziele Prognosen, Inhalte, Empfehlungen oder Entscheidungen ab.</div>
+        <div class="definition-credit">Knappe Paraphrase nach OECD (2024)</div>
+      </div>
+      <div class="definition-card">
+        <div class="definition-kind">Forschungsperspektive · Elaine Rich</div>
+        <div class="definition-text">KI untersucht, wie wir Computer Dinge tun lassen, die Menschen <mark>im Moment</mark> besser können.</div>
+        <div class="definition-credit">Eigene Übersetzung nach Rich (1983)</div>
+      </div>
+    </div>
+    <div class="definition-caption">Eine beschreibt das System. Die andere zeigt eine zeitabhängige Forschungsaufgabe.</div>
+    
+  </section>
+
+  <section class="slide ai-umbrella-slide">
+    <h2>KI ist ein Oberbegriff</h2>
+    <div class="umbrella-statement">„KI“ bezeichnet keine einzelne Technologie.</div>
+    <div class="ai-map">
+      <div class="ai-map-rules">Explizite Regeln</div>
+      <div class="ai-map-learning">Aus Daten gelernte Modelle
+        <div class="ai-map-generative">Generative Modelle
+          <div class="ai-map-llm">Sprachmodelle</div>
+        </div>
+      </div>
+    </div>
+    <div class="ai-map-agent">Agentische Systeme können Modelle, Regeln, Tools und Abläufe kombinieren.</div>
+    
+  </section>
+
+  <section class="slide ai-questions-slide">
+    <h2>Wie funktioniert das konkrete System?</h2>
+    <div class="figure" id="fig-ai-questions"></div>
+    
+  </section>
+
+  <section class="slide rules-slide">
+    <h2>Regelbasierte Systeme</h2>
+    <div class="concept-lead">Menschen legen die Entscheidungslogik ausdrücklich fest.</div>
+    <div class="figure" id="fig-rules"></div>
+    <div class="concept-caption">Wenn der gesetzliche Grenzwert überschritten ist, wird die Charge gesperrt.</div>
+    
+  </section>
+
+  <section class="slide rules-fit-slide">
+    <h2>Wann Regeln gut funktionieren</h2>
+    <div class="rules-fit-grid">
+      <div class="rules-fit-card"><span>01</span><div>Bekannte<br>Regeln</div></div>
+      <div class="rules-fit-card"><span>02</span><div>Stabile<br>Bedingungen</div></div>
+      <div class="rules-fit-card"><span>03</span><div>Eindeutige<br>Eingaben</div></div>
+      <div class="rules-fit-card"><span>04</span><div>Begrenzte<br>Ausnahmen</div></div>
+    </div>
+    <div class="concept-caption">Klare Bedingungen machen Regeln nachvollziehbar und gut kontrollierbar.</div>
+    
+  </section>
+
+  <section class="slide ml-slide">
+    <h2>Machine Learning</h2>
+    <div class="concept-lead">Ein Modell lernt statistische Zusammenhänge aus Beispieldaten.</div>
+    <div class="figure" id="fig-ml"></div>
+    <div class="concept-caption">Beispiel: Absatzprognose aus historischen Verkaufsdaten.</div>
+    
+  </section>
+
+  <section class="slide ml-data-slide">
+    <h2>Machine Learning hängt von Daten ab</h2>
+    <div class="data-factor-grid">
+      <div class="data-factor"><div class="data-factor-title">Qualität</div><div>Messfehler verändern das Lernsignal.</div></div>
+      <div class="data-factor"><div class="data-factor-title">Abdeckung</div><div>Fehlende Fälle bleiben schwer einschätzbar.</div></div>
+      <div class="data-factor"><div class="data-factor-title">Aktualität</div><div>Alte Muster passen nicht immer zu neuen Lagen.</div></div>
+    </div>
+    <div class="concept-caption">Daten prägen das Modellverhalten; gute Daten garantieren keine richtige Prognose.</div>
+    
+  </section>
+
+  <section class="slide generative-slide">
+    <h2>Generative KI</h2>
+    <div class="concept-lead">Generative Modelle erzeugen neue Inhalte aus gelernten Mustern und aktuellem Kontext.</div>
+    <div class="figure" id="fig-generative"></div>
+    <div class="concept-caption">Eine erzeugte Ausgabe ist ein Entwurf, noch kein überprüftes Ergebnis.</div>
+    
+  </section>
+
+  <section class="slide approaches-slide">
+    <h2>Regeln, Lernen und Generieren</h2>
+    <table class="approaches-table"><thead><tr><th>Prinzip</th><th>Grundidee</th><th>Beispiel</th></tr></thead><tbody>
+      <tr><td>Regelbasiert</td><td>Logik wird vorgegeben</td><td>Grenzwertregel</td></tr>
+      <tr><td>Machine Learning</td><td>Zusammenhänge werden gelernt</td><td>Nachfrageprognose</td></tr>
+      <tr><td>Generativ</td><td>Neue Inhalte werden erzeugt</td><td>Berichtsentwurf</td></tr>
+    </tbody></table>
+    <div class="concept-caption">Reale Anwendungen können mehrere Prinzipien kombinieren.</div>
+    
+  </section>
+
+  <section class="slide foundation-slide">
+    <h2>Foundation Models</h2>
+    <div class="concept-lead">Ein breit trainiertes Basismodell kann für viele Aufgaben genutzt oder angepasst werden.</div>
+    <div class="figure" id="fig-foundation"></div>
+    
+  </section>
+
+  <section class="slide llm-slide">
+    <h2>Was ist ein Large Language Model?</h2>
+    <div class="concept-lead">Ein großes, datengetriebenes Modell für Sprachverarbeitung und Spracherzeugung.</div>
+    <div class="figure" id="fig-llm"></div>
+    <div class="concept-caption">Das Modell wurde anhand vieler Beispiele trainiert.</div>
+    
+  </section>
+
+  <section class="slide tokens-slide">
+    <h2>Sprache wird in Tokens verarbeitet</h2>
+    <div class="concept-lead">Das Modell verarbeitet eine Folge kleiner Einheiten.</div>
+    <div class="token-sentence">Die Charge, bitte prüfen.</div>
+    <div class="token-pointer" aria-hidden="true">↓</div>
+    <div class="token-row" aria-label="Schematische Tokenfolge: Die, Leerzeichen, Charge, Komma, Leerzeichen, bitte, Leerzeichen, prüfen, Punkt">
+      <span>Die</span><span class="token-special" aria-label="Leerzeichen">␠</span><span>Charge</span><span class="token-special">,</span><span class="token-special" aria-label="Leerzeichen">␠</span><span>bitte</span><span class="token-special" aria-label="Leerzeichen">␠</span><span>prüfen</span><span class="token-special">.</span>
+    </div>
+    <div class="token-legend">␠ = Leerzeichen</div>
+    <div class="footnote">Schematische Zerlegung: Tatsächliche Token-Grenzen hängen vom Tokenizer ab.</div>
+    
+  </section>
+
+  <section class="slide context-slide">
+    <h2>Der Kontext ist der aktuelle Arbeitsraum</h2>
+    <div class="figure" id="fig-context"></div>
+    <div class="concept-caption">Eine Antwort entsteht aus dem Kontext, der beim aktuellen Aufruf vorliegt.</div>
+    
+  </section>
+
+  <section class="slide next-token-slide">
+    <h2>Das nächste Token</h2>
+    <div class="concept-lead">Das Modell berechnet Wahrscheinlichkeiten für mögliche Fortsetzungen.</div>
+    <div class="figure" id="fig-next-token"></div>
+    <div class="footnote">Fiktive Werte; sichtbare Wörter können aus mehreren Tokens bestehen.</div>
+    
+  </section>
+
+  <section class="slide generation-slide">
+    <h2>Text entsteht Schritt für Schritt</h2>
+    <div class="figure" id="fig-generation"></div>
+    <div class="concept-caption">Nach jedem erzeugten Token wird die Folge erweitert und der Prozess wiederholt.</div>
+    
+  </section>
+
+  <section class="slide variation-slide">
+    <h2>Gleiche Eingabe, unterschiedliche Antworten?</h2>
+    <div class="concept-lead">Je nach Auswahlverfahren sind verschiedene Fortsetzungen möglich.</div>
+    <div class="figure" id="fig-variation"></div>
+    <div class="concept-caption">Sampling kann Variation erzeugen.</div>
+    
+  </section>
+
+  <section class="slide attention-slide">
+    <h2>Attention verbindet Stellen im Kontext</h2>
+    <div class="concept-lead">Transformer modellieren Beziehungen zwischen Positionen einer Eingabe.</div>
+    <div class="figure" id="fig-attention"></div>
+    <div class="footnote">Schematische Verbindungen, keine gemessenen Attention-Gewichte.</div>
+    
+  </section>
+
+  <section class="slide transformer-explainer-slide">
+    <h2>Transformer im Browser erkunden</h2>
+    <div class="concept-lead">Vom Eingabetoken zur Vorhersage des nächsten Tokens.</div>
+    <div class="figure" id="fig-transformer-explainer"></div>
+    <a class="transformer-explainer-open" href="https://poloclub.github.io/transformer-explainer/" target="_blank" rel="noopener noreferrer">Transformer Explainer öffnen ↗</a>
+    <div class="footnote">Schematische Darstellung · interaktive Demo mit GPT-2 small · Polo Club, Georgia Tech</div>
+    
+  </section>
+
+  <section class="slide pretraining-slide">
+    <h2>Pretraining</h2>
+    <div class="concept-lead">Das Modell lernt statistische Muster aus großen Datenmengen.</div>
+    <div class="figure" id="fig-pretraining"></div>
+    
+  </section>
+
+  <section class="slide training-scale-slide">
+    <h2>Pretraining: Größenordnung der Textmenge</h2>
+    <div class="scale-lead">Mensch und Sprachmodelle: verarbeitete Sprachmenge</div>
+    <div class="scale-ratio">≈ 200×<span>GPT-3 gegenüber Mensch · grob</span></div>
+    <div class="scale-axis-title">Trainingstokens / geschätzte Tokenäquivalente · logarithmische Skala</div>
+    <div class="scale-plot" aria-hidden="true">
+      <span style="left:0%"><i>0,1 Mrd.</i></span><span style="left:16.667%"><i>1 Mrd.</i></span>
+      <span style="left:33.333%"><i>10 Mrd.</i></span><span style="left:50%"><i>100 Mrd.</i></span>
+      <span style="left:66.667%"><i>1 Bio.</i></span><span style="left:83.333%"><i>10 Bio.</i></span>
+      <span style="left:100%"><i>100 Bio.</i></span>
+    </div>
+    <div class="scale-row scale-human"><div class="scale-name">Mensch<span>Hören + Lesen bis 60 J.</span></div><div class="scale-bar"></div><div class="scale-value">≈ 1,5 Mrd. Tokenäquivalente*</div></div>
+    <div class="scale-row scale-gpt3"><div class="scale-name">GPT-3<span>Modell von 2020</span></div><div class="scale-bar"></div><div class="scale-value">300 Mrd. Tokens</div></div>
+    <div class="scale-row scale-qwen3"><div class="scale-name">Qwen3<span>Modellfamilie von 2025</span></div><div class="scale-bar"></div><div class="scale-value">≈ 36 Bio. Tokens</div></div>
+    <div class="scale-notes">
+      <div>* Mensch: geschätzte 1,15 Mrd. englische Wörter bis 60 J. ≈ 1,5 Mrd. Tokenäquivalente (grobe Umrechnung).</div>
+      <div>Tokenisierer unterscheiden sich. Der Vergleich zeigt Größenordnungen, nicht Lernweise oder Qualität.</div>
+      <div>Quellen: Wingfield &amp; Connell (2022) · Brown et al. (2020) · Qwen-Team (2025) · OpenAI Token Guide</div>
+    </div>
+    
+  </section>
+
+  <section class="slide training-data-slide">
+    <h2>Welche Daten nutzen ChatGPT-Modelle?</h2>
+    <div class="concept-lead">OpenAI nennt drei Hauptquellen für die Entwicklung seiner Modelle.</div>
+    <div class="training-data-grid">
+      <div class="training-data-card"><span>01</span><div>Öffentlich zugängliche<br>Inhalte</div></div>
+      <div class="training-data-card"><span>02</span><div>Daten aus<br>Partnerschaften</div></div>
+      <div class="training-data-card"><span>03</span><div>Beiträge von Nutzenden,<br>Trainern und Forschenden</div></div>
+    </div>
+    <div class="training-data-example"><span>Historisches Beispiel GPT-3</span><div>Common Crawl · WebText2 · Bücher · Wikipedia</div></div>
+    <div class="footnote">Keine vollständige Aufschlüsselung für jedes aktuelle ChatGPT-Modell veröffentlicht.</div>
+    
+  </section>
+
+  <section class="slide tuning-slide">
+    <h2>Instruction Tuning</h2>
+    <div class="concept-lead">Beispielantworten helfen dem Modell, Anweisungen besser zu befolgen.</div>
+    <div class="figure" id="fig-tuning"></div>
+    
+  </section>
+
+  <section class="slide preference-slide">
+    <h2>Präferenz- und Feedback-Training</h2>
+    <div class="concept-lead">Bewertete Antworten liefern ein weiteres Trainingssignal.</div>
+    <div class="figure" id="fig-preference"></div>
+    <div class="footnote">Eine Präferenz ist eine Bewertung, keine fachliche Wahrheitsprüfung.</div>
+    
+  </section>
+
+  <section class="slide assistant-slide">
+    <h2>Vom Basismodell zum Assistenten</h2>
+    <div class="figure" id="fig-assistant"></div>
+    <div class="concept-caption">Post-Training verbessert die Nutzbarkeit, garantiert aber keine Fehlerfreiheit.</div>
+    
+  </section>
+
+  <section class="slide llm-strength-slide">
+    <h2>Stärke: Sprache strukturieren</h2>
+    <div class="concept-lead">Ein LLM kann unstrukturierte Sprache in eine prüfbare Form bringen.</div>
+    <div class="figure" id="fig-structure"></div>
+    <div class="concept-caption">Die Felder müssen bei wichtigen Fällen fachlich kontrolliert werden.</div>
+    
+  </section>
+
+  <section class="slide llm-strength-slide">
+    <h2>Stärke: Informationen verdichten</h2>
+    <div class="concept-lead">Ein LLM kann mehrere Texte zu einer kurzen Übersicht zusammenführen.</div>
+    <div class="figure" id="fig-condense"></div>
+    <div class="concept-caption">Für Entscheidungen bleiben die Originalquellen wichtig.</div>
+    
+  </section>
+
+  <section class="slide llm-strength-slide">
+    <h2>Stärke: Optionen erzeugen</h2>
+    <div class="concept-lead">Ein LLM kann Alternativen, Hypothesen und Formulierungen vorschlagen.</div>
+    <div class="figure" id="fig-options"></div>
+    <div class="concept-caption">Vorschlagen und Bewerten sind getrennte Schritte.</div>
+    
+  </section>
+
+  <section class="slide llm-matrix-slide">
+    <h2>Plausibel ist nicht automatisch richtig</h2>
+    <div class="concept-lead">Sprachliche Überzeugungskraft und sachliche Richtigkeit sind verschieden.</div>
+    <div class="evidence-matrix">
+      <div class="matrix-corner"></div><div class="matrix-head">überzeugend</div><div class="matrix-head">wenig überzeugend</div>
+      <div class="matrix-side">belegt</div><div class="matrix-cell matrix-good">prüfbare Aussage,<br>klar formuliert</div><div class="matrix-cell">prüfbare Aussage,<br>holprig formuliert</div>
+      <div class="matrix-side">nicht belegt</div><div class="matrix-cell matrix-alert">flüssige Behauptung<br>ohne Grundlage</div><div class="matrix-cell">unsichere Behauptung<br>ohne Grundlage</div>
+    </div>
+    <div class="concept-caption">Für Entscheidungen zählt der Beleg, nicht der Sprachstil.</div>
+    
+  </section>
+
+  <section class="slide unsupported-slide">
+    <h2>Unbelegte Aussagen</h2>
+    <div class="concept-lead">Ein Modell kann plausible Details ergänzen, die im Material nicht stehen.</div>
+    <div class="unsupported-source"><span>Gegebener Fall</span>Ein Messwert liegt knapp außerhalb des internen Zielbereichs. Die Ursache ist unklar.</div>
+    <div class="unsupported-answer"><span>Fiktive Modellantwort</span>„Die Abweichung entstand <strong>durch eine defekte Kühlanlage</strong>. Deshalb sollte die Charge gesperrt werden.“</div>
+    <div class="concept-caption">Die markierte Ursache ist im Fall nicht belegt.</div>
+    
+  </section>
+
+  <section class="slide missing-info-slide">
+    <h2>Fehlende Information bleibt leicht unsichtbar</h2>
+    <div class="concept-lead">Auch mit Lücken im Kontext kann eine Antwort vollständig klingen.</div>
+    <div class="missing-grid"><div class="missing-card"><span>Fallakte</span><div>Messwert: auffällig</div><div>Grenzwert: eingehalten</div><div class="missing-empty">Wiederholungsmessung: offen</div></div><div class="missing-arrow">→</div><div class="missing-card missing-response"><span>Antwort</span><div>„Die Charge kann nach Bewertung aller Messwerte freigegeben werden.“</div></div></div>
+    <div class="concept-caption">Die Formulierung verrät nicht zuverlässig, welche Angaben fehlen.</div>
+    
+  </section>
+
+  <section class="slide long-context-slide">
+    <h2>Langer Kontext wird nicht immer zuverlässig genutzt</h2>
+    <div class="concept-lead">Wichtige Information kann trotz Bereitstellung übersehen werden.</div>
+    <div class="figure" id="fig-long-context"></div>
+    <div class="footnote">Schematische Darstellung; Befund hängt von Modell und Aufgabe ab.</div>
+    
+  </section>
+
+  <section class="slide verify-slide">
+    <h2>Verifikation ist ein eigener Arbeitsschritt</h2>
+    <div class="concept-lead">Kritische Aussagen prüfen wir an Quelle, Daten und Fachwissen.</div>
+    <div class="figure" id="fig-verify"></div>
+    <div class="concept-caption">Eine Quellenangabe muss die konkrete Aussage tragen.</div>
+    
+  </section>
+
+  <section class="slide prompt-slide"><h2>Ein Prompt beschreibt die Aufgabe</h2><div class="concept-lead">Was soll das Modell genau tun?</div><div class="prompt-card" data-active="1"></div><div class="prompt-example">„Ordne die Handlungsoptionen für die auffällige Joghurtcharge.“</div></section>
+  <section class="slide prompt-slide"><h2>Ein Prompt braucht Kontext</h2><div class="concept-lead">Welche Informationen soll das Modell verwenden?</div><div class="prompt-card" data-active="2"></div><div class="prompt-example">Messwert knapp außerhalb des Zielbereichs; Grenzwert eingehalten; Wiederholungsmessung dauert vier Stunden.</div></section>
+  <section class="slide prompt-slide"><h2>Kriterien explizit machen</h2><div class="concept-lead">Ziele und Grenzen gehören in die Aufgabe.</div><div class="prompt-card" data-active="3"></div><div class="prompt-example">Produktqualität · Lieferfähigkeit · Kosten · rechtliche Anforderungen · Entscheidung in 30 Minuten</div></section>
+  <section class="slide prompt-slide"><h2>Die Ausgabe strukturieren</h2><div class="concept-lead">Ein Format kann Aussagen leichter prüfbar machen.</div><div class="prompt-card" data-active="4"></div><div class="prompt-example">„Trenne Fakten, Annahmen, offene Fragen und Handlungsoptionen.“</div></section>
+  <section class="slide prompt-slide"><h2>Unsicherheit sichtbar machen</h2><div class="concept-lead">Frage gezielt nach fehlenden Informationen und unsicheren Annahmen.</div><div class="prompt-card" data-active="5"></div><div class="prompt-example">„Welche Angaben fehlen für eine belastbare Einschätzung?“</div><div class="footnote">Auch diese Nachfrage garantiert nicht, dass alle Lücken erkannt werden.</div></section>
+
+  <section class="slide retrieval-slide"><h2>Retrieval: Dokumente zur Laufzeit bereitstellen</h2><div class="concept-lead">Eine Suche kann relevante Passagen in den aktuellen Modellkontext bringen.</div><div class="figure" id="fig-retrieval"></div><div class="concept-caption">Bereitstellen ist kein neues Training.</div></section>
+
+  <section class="slide tools-slide"><h2>Tools erweitern ein Sprachmodell</h2><div class="concept-lead">Ein System kann dem Modell Werkzeuge zur Verfügung stellen.</div><div class="figure" id="fig-tools"></div><div class="concept-caption">Zugriffsrechte und erlaubte Aktionen werden im System festgelegt.</div></section>
+
+  <section class="slide tool-result-slide"><h2>Ein korrektes Tool-Ergebnis genügt nicht</h2><div class="concept-lead">Das Modell kann eine richtige Zahl falsch deuten oder für die falsche Frage verwenden.</div><div class="figure" id="fig-tool-result"></div><div class="concept-caption">Die Interpretation bleibt eine Prüfstelle.</div></section>
+
+  <section class="slide solution-task-slide"><h2>Arbeitsauftrag</h2><div class="task-intro">Wählt für jedes Problem die am besten geeignete technische Lösung:</div><ul class="task-options"><li>einfacher regelbasierter Workflow</li><li>maschinelles Lernen</li><li>Sprachmodell</li><li>agentisches KI-System</li><li>Kombination mehrerer Ansätze</li></ul><div class="task-rationale">Begründet eure Wahl jeweils kurz.</div><div class="task-principle">Entscheidend ist nicht, welche Lösung am modernsten ist, sondern welche das Problem möglichst einfach, zuverlässig und angemessen löst.</div></section>
+
+  <section class="slide routine-slide"><h2>Eine robuste LLM-Arbeitsroutine</h2><div class="figure" id="fig-routine"></div><div class="concept-caption">Bei Bedarf beginnt die Schleife erneut mit einer präziseren Aufgabe.</div></section>
+
+  <section class="slide llm-takeaway-slide"><div class="llm-takeaway">Ein LLM ist ein leistungsfähiger<br><span>Generator und Strukturierer</span> –<br>aber kein Wahrheitsautomat<br>und kein Verantwortlicher.</div></section>
+
+  <section class="slide reading-slide"><h2>Weiterlesen: Sprachmodelle in der Praxis</h2><div class="reading-grid"><div class="reading-column"><div class="reading-heading">Einstieg</div><a href="https://web.stanford.edu/~jurafsky/slp3/">Jurafsky &amp; Martin<span>Speech and Language Processing</span></a><a href="https://doi.org/10.6028/NIST.AI.600-1">NIST AI 600-1<span>Generative AI Profile · Risiken und Kontrolle</span></a></div><div class="reading-column"><div class="reading-heading">Vertiefung</div><a href="https://arxiv.org/abs/2005.11401">Lewis et al. (2020)<span>Retrieval-Augmented Generation</span></a><a href="https://doi.org/10.1162/tacl_a_00638">Liu et al. (2024)<span>Lost in the Middle · langer Kontext</span></a><a href="https://arxiv.org/abs/2302.04761">Schick et al. (2023)<span>Toolformer · Werkzeuge nutzen</span></a></div></div></section>
+
+  <section class="slide part part-tech part-agent" data-part="KI"><div class="content"><div class="part-n">Vertiefung · KI</div><div class="part-text">Was ändert sich,<br>wenn KI handeln kann?</div><div class="part-subtitle">Vom Sprachmodell zum agentischen System.</div></div><div class="part-figure" id="fig-agent-divider"></div></section>
+
+  <section class="slide agent-flow-slide"><h2>Ein einfacher Chatbot antwortet auf eine Anfrage</h2><div class="concept-lead">Eine Eingabe führt zu einer Antwort.</div><div class="figure" id="fig-chatbot"></div></section>
+
+  <section class="slide agent-flow-slide"><h2>Ein Workflow folgt einem vorgegebenen Ablauf</h2><div class="concept-lead">Mehrere Schritte machen ein System noch nicht zum Agenten.</div><div class="figure" id="fig-agent-workflow"></div><div class="concept-caption">Die Übergänge sind vorab festgelegt.</div></section>
+
+  <section class="slide agent-flow-slide"><h2>Ein agentisches System wählt nächste Schritte</h2><div class="concept-lead">Der weitere Ablauf hängt von Ziel, Ergebnis und aktuellem Zustand ab.</div><div class="figure" id="fig-agent-dynamic"></div><div class="concept-caption">Der nächste Weg wird erst nach dem Zwischenergebnis gewählt.</div></section>
+
+  <section class="slide agent-compare-slide"><h2>Chatbot, Workflow und Agent im Vergleich</h2><table class="agent-compare-table"><thead><tr><th>System</th><th>Ablauf</th><th>Handlungsspielraum</th></tr></thead><tbody><tr><td>Chatbot</td><td>einzelne Anfrage</td><td>antwortet</td></tr><tr><td>Workflow</td><td>vorgegebene Schritte</td><td>führt festen Ablauf aus</td></tr><tr><td>Agent</td><td>dynamische Schritte</td><td>wählt nächste Aktion innerhalb von Grenzen</td></tr></tbody></table><div class="concept-caption">Ein Vergleich der Steuerung, keine Rangliste.</div></section>
+
+  <section class="slide agent-system-slide"><h2>Ein Agent ist ein Gesamtsystem</h2><div class="concept-lead">Das Sprachmodell ist eine Komponente.</div><div class="figure" id="fig-agent-system"></div></section>
+
+  <section class="slide agent-structure-slide"><h2>Der Auftrag gibt eine Richtung vor</h2><div class="concept-lead">Ein Ziel beschreibt, was erreicht werden soll – nicht jeden einzelnen Schritt.</div><div class="figure" id="fig-agent-goal"></div><div class="concept-caption">Beispiel: „Kläre, ob der Rohstoff für morgen ausreicht.“</div></section>
+
+  <section class="slide agent-structure-slide"><h2>Zustand hält den bisherigen Verlauf fest</h2><div class="concept-lead">Das System muss wissen, was geprüft wurde und was aktuell gilt.</div><div class="figure" id="fig-agent-state"></div><div class="concept-caption">Gespeicherte Angaben können veraltet oder falsch sein.</div></section>
+
+  <section class="slide agent-structure-slide"><h2>Tools verbinden das System mit seiner Umgebung</h2><div class="concept-lead">Tools können Informationen lesen oder außerhalb des Modells etwas verändern.</div><div class="figure" id="fig-agent-tools"></div><div class="concept-caption">Lesen und Ausführen brauchen unterschiedliche Rechte.</div></section>
+
+  <section class="slide agent-rights-slide"><h2>Berechtigungen bestimmen die möglichen Handlungen</h2><div class="concept-lead">Technisch möglich heißt noch nicht erlaubt.</div><div class="rights-grid"><div class="rights-card"><span>01</span><strong>Lesen</strong><div>Bestand und Lieferdaten abfragen</div></div><div class="rights-card"><span>02</span><strong>Entwurf speichern</strong><div>Bestellung vorbereiten</div></div><div class="rights-card"><span>03</span><strong>Nach außen senden</strong><div>E-Mail an Lieferanten verschicken</div></div><div class="rights-card"><span>04</span><strong>Wirkung auslösen</strong><div>Bestellung oder Löschung ausführen</div></div></div><div class="concept-caption">Rechte für Aufgabe, Tool, Parameter und Wirkung festlegen.</div></section>
+
+  <section class="slide agent-structure-slide"><h2>Steuerungslogik setzt Grenzen für den Ablauf</h2><div class="concept-lead">Das System braucht Bedingungen für Weiterarbeiten, Stoppen und Eskalieren.</div><div class="figure" id="fig-agent-control"></div></section>
+
+  <section class="slide agent-structure-slide"><h2>Planen, Handeln, Beobachten, Aktualisieren</h2><div class="concept-lead">Nach jeder Aktion verändert ein Ergebnis den nächsten Schritt.</div><div class="figure" id="fig-agent-loop"></div><div class="concept-caption">Eine Aktion kann auch nur eine Informationsabfrage sein.</div></section>
+
+  <section class="slide agent-gate-slide"><h2>Zwischen Vorschlag und Handlung liegt ein Prüfpunkt</h2><div class="concept-lead">Ein vorgeschlagener Tool-Aufruf muss nicht automatisch ausgeführt werden.</div><div class="figure" id="fig-agent-gate"></div><div class="gate-checks">Tool erlaubt? · Parameter erlaubt? · Berechtigung vorhanden? · Freigabe nötig?</div></section>
+
+  <section class="slide autonomy-slide"><h2>Autonomie ist ein Spektrum</h2><div class="concept-lead">Wie weit darf das System eigenständig handeln?</div><div class="autonomy-grid"><div class="autonomy-card"><span>01</span><div>empfiehlt</div></div><div class="autonomy-card"><span>02</span><div>bereitet Handlung vor</div></div><div class="autonomy-card"><span>03</span><div>führt begrenzt aus</div></div><div class="autonomy-card"><span>04</span><div>verfolgt Ziel über mehrere Schritte</div></div></div><div class="concept-caption">Die passende Stufe hängt von Aufgabe und Folgen ab.</div></section>
+
+  <section class="slide autonomy-control-slide"><h2>Mehr Handlungsspielraum verlangt bewusstere Kontrollen</h2><div class="concept-lead">Rechtebegrenzung, Beobachtung und Eskalation müssen zur Wirkung passen.</div><div class="autonomy-compare"><div class="autonomy-variant"><span>Variante A</span><strong>nur Empfehlung</strong><div>Ergebnis prüfen</div></div><div class="autonomy-variant autonomy-variant-active"><span>Variante B</span><strong>Bestellung auslösen</strong><div>Rechte begrenzen · Betrag prüfen · Freigabe einholen · Ausführung protokollieren</div></div></div><div class="concept-caption">Kontrollbedarf hängt auch von Schaden, Erkennbarkeit und Umkehrbarkeit ab.</div></section>
+
+  <section class="slide agent-error-slide"><h2>Fehler können sich über Schritte fortpflanzen</h2><div class="concept-lead">Ein falscher Zwischenstand kann spätere Aktionen fehlleiten.</div><div class="figure" id="fig-agent-error"></div><div class="concept-caption">Ein früher Prüfpunkt kann die Kette unterbrechen.</div></section>
+
+  <section class="slide agent-fit-slide"><h2>Nicht jedes Problem braucht einen Agenten</h2><div class="concept-lead">Ein fester Workflow passt gut, wenn Schritte und Ausnahmen vorhersehbar sind.</div><div class="figure" id="fig-agent-fit"></div><div class="concept-caption">Dynamische Planung hilft bei offenen, wechselnden Schritten.</div></section>
+
+  <section class="slide agent-case-slide"><h2>Fallstudie: Der Rohstoff für morgen</h2><div class="case-prose">Ein Lebensmittelunternehmen will morgen früh eine Charge produzieren. Dafür wird ein kritischer Rohstoff benötigt. Am späten Nachmittag meldet die Produktionsplanung, dass der verfügbare Bestand möglicherweise nicht reicht. Im ERP ist zwar noch Ware verzeichnet, aber die letzte Lieferung wurde nicht eindeutig verbucht.<br><br>Die Produktionsleitung bittet ein agentisches System, die Versorgungslage zu klären und einen sicheren nächsten Schritt vorzubereiten. Fehlt der Rohstoff, kann die Produktion nicht planmäßig starten. Eine unnötige Eilbestellung würde dagegen zusätzliche Kosten verursachen. Bis Feierabend braucht die Leitung eine begründete Empfehlung.</div></section>
+
+  <section class="slide agent-case-slide agent-assignment-slide"><h2>Arbeitsauftrag: Wir spielen ein agentisches System</h2><div class="case-prose">Verteilt in eurer Gruppe die Rollen Planungssystem, ERP, Lieferantendatenbank, Freigabeverantwortliche Person und Risikobeobachtung. Das Planungssystem entscheidet nach jeder neuen Information, welche Abfrage oder Handlung als Nächstes sinnvoll ist.<br><br>Die anderen Rollen antworten nur auf tatsächlich gestellte Anfragen. Haltet für jeden Schritt fest, welche Information vorlag, welche Berechtigung nötig wäre und an welchem Punkt ein Mensch freigeben oder übernehmen muss.</div><div class="case-time">15–20 Minuten</div></section>
+
+  <section class="slide agent-debrief-slide"><h2>Wo lag das eigentliche Risiko?</h2><div class="concept-lead">Modell · Daten · Tools · Berechtigungen · Eskalation</div><div class="figure" id="fig-agent-debrief"></div></section>
+
+  <section class="slide agent-takeaway-slide"><div class="agent-takeaway">Agentisch ist das <span>Gesamtsystem</span>:<br>Modell, Zustand, Tools,<br>Berechtigungen, Steuerung<br>und Kontrollpunkte.</div></section>
+
+  <section class="slide reading-slide"><h2>Weiterlesen: Agentische Systeme</h2><div class="reading-grid agent-reading-grid"><div class="reading-column"><div class="reading-heading">Einstieg</div><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic (2024)<span>Building Effective Agents</span></a><a href="https://arxiv.org/abs/2210.03629">Yao et al. (2022/2023)<span>ReAct · Planen und Handeln</span></a><div class="reading-heading">Sicherheit</div><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF<span>Risikomanagement</span></a><a href="https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations">NIST CAISI (2025)<span>Agent Hijacking Evaluations</span></a></div><div class="reading-column"><div class="reading-heading">Vertiefung</div><a href="https://arxiv.org/abs/2308.11432">Wang et al. (2023/2025)<span>Survey zu LLM-Agenten</span></a><a href="https://arxiv.org/abs/2302.04761">Schick et al. (2023)<span>Toolformer · Toolnutzung</span></a><a href="https://doi.org/10.1109/3468.844354">Parasuraman et al. (2000)<span>Stufen der Automatisierung</span></a></div></div></section>
+
+  <section class="slide part part-tech part-human" data-part="Mensch und KI"><div class="content"><div class="part-n">Block 3</div><div class="part-text">Wer sollte<br>was entscheiden?</div><div class="part-subtitle">Aufgabenteilung, Vertrauen, Kontrolle und Verantwortung.</div></div><div class="part-figure" id="fig-human-divider"></div></section>
+
+  <section class="slide human-chain-slide"><h2>Zurück zur Entscheidungskette</h2><div class="concept-lead">Für jeden Schritt fragen wir: Mensch, KI oder beide?</div><div class="figure" id="fig-human-chain-all"></div></section>
+
+  <section class="slide human-chain-slide"><h2>KI kann Informationen beschaffen</h2><div class="concept-lead">Dokumente durchsuchen, Daten bündeln, relevante Stellen finden.</div><div class="figure" id="fig-human-chain-info"></div><div class="concept-caption">Prüffrage: Sind die Quellen vollständig und aktuell?</div></section>
+
+  <section class="slide human-chain-slide"><h2>KI kann Informationen analysieren</h2><div class="concept-lead">Klassifizieren, prognostizieren, Muster erkennen, zusammenfassen.</div><div class="figure" id="fig-human-chain-analysis"></div><div class="concept-caption">Prüffrage: Wie verlässlich ist die Analyse in diesem Kontext?</div></section>
+
+  <section class="slide human-chain-slide"><h2>Bewertung braucht Ziele und Werturteile</h2><div class="concept-lead">Wie viel Mehrkosten sind akzeptabel, um ein Qualitätsrisiko zu senken?</div><div class="figure" id="fig-human-chain-value"></div><div class="concept-caption">Eine Prognose allein legt die Gewichtung der Folgen nicht fest.</div></section>
+
+  <section class="slide human-chain-slide"><h2>KI kann zusätzliche Handlungsoptionen finden</h2><div class="concept-lead">Mehr Vorschläge erweitern den Blick – ihre Tauglichkeit muss geprüft werden.</div><div class="figure" id="fig-human-chain-options"></div><div class="concept-caption">Beispiel: warten · eilig bestellen · umplanen · Ersatz prüfen</div></section>
+
+  <section class="slide human-chain-slide"><h2>KI kann eine Auswahl vorbereiten</h2><div class="concept-lead">Sortieren und empfehlen setzt Kriterien voraus.</div><div class="figure" id="fig-human-chain-select"></div><div class="concept-caption">Wer legt Kriterien und Gewichtungen fest?</div></section>
+
+  <section class="slide human-chain-slide"><h2>KI kann Handlungen ausführen</h2><div class="concept-lead">Aus einer Empfehlung wird eine Wirkung außerhalb des Systems.</div><div class="figure" id="fig-human-chain-action"></div><div class="concept-caption">Beispiel: Empfehlung → Freigabe oder Grenze → Bestellung</div></section>
+
+  <section class="slide human-four-slide"><h2>Vier Funktionen von Automatisierung</h2><div class="concept-lead">In jeder Funktion kann unterschiedlich viel automatisiert werden.</div><div class="human-four-grid"><div><span>01</span><strong>Information beschaffen</strong><p>Lieferdaten finden</p></div><div><span>02</span><strong>Information analysieren</strong><p>Verspätung prognostizieren</p></div><div><span>03</span><strong>Auswahl unterstützen</strong><p>Alternativen ordnen</p></div><div><span>04</span><strong>Handlung ausführen</strong><p>Bestellung auslösen</p></div></div><div class="concept-caption">Nach Parasuraman, Sheridan &amp; Wickens (2000).</div></section>
+
+  <section class="slide human-study-slide"><h2>Mensch und KI zusammen sind nicht automatisch besser</h2><div class="concept-lead">Das Team muss sich mit dem jeweils besseren Einzelbeitrag messen.</div><div class="figure" id="fig-human-study-baseline"></div><div class="study-source">Vaccaro, Almaatouq &amp; Malone (2024) · 106 Experimente</div></section>
+
+  <section class="slide human-study-slide human-study-impact"><h2>Wenn KI allein stärker war, verlor das Team im Mittel</h2><div class="concept-lead">Mensch + KI lag dann unter KI allein.</div><div class="figure" id="fig-human-study-split"></div><div class="study-source">Befund aus untersuchten Experimenten · Vaccaro et al. (2024)</div></section>
+
+  <section class="slide human-figure-slide"><h2>Komplementarität muss gestaltet werden</h2><div class="concept-lead">Ein Team gewinnt, wenn Beiträge und Übergaben zur Aufgabe passen.</div><div class="figure" id="fig-human-complement"></div><div class="concept-caption">Unterschiedliche Informationen und Fähigkeiten schaffen Potenzial.</div></section>
+
+  <section class="slide human-compare-slide"><h2>Wo können Mensch und KI jeweils beitragen?</h2><div class="human-compare-grid"><div><span>KI kann helfen bei</span><strong>Umfang · Tempo · Muster</strong><p>viele Lieferdaten auswerten<br>gleiche Regeln konsistent anwenden</p></div><div><span>Menschen bringen ein</span><strong>Ziele · Kontext · Verantwortung</strong><p>Folgen gegeneinander abwägen<br>Ausnahmen und Betroffene einordnen</p></div></div><div class="concept-caption">Mögliche Stärken – die konkrete Leistung muss geprüft werden.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Vertrauen ist keine Ja-oder-Nein-Frage</h2><div class="concept-lead">Entscheidend ist, ob die Nutzung zur tatsächlichen Zuverlässigkeit passt.</div><div class="figure" id="fig-human-trust"></div><div class="concept-caption">Schematisch: keine Messwerte und keine festen Schwellen.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Zu viel Vertrauen: ungeprüft übernehmen</h2><div class="concept-lead">Eine falsche Empfehlung kann zum Anker der Entscheidung werden.</div><div class="figure" id="fig-human-overreliance"></div><div class="concept-caption">Zeitdruck und überzeugende Darstellung können die Prüfung erschweren.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Zu wenig Vertrauen: nach einem Fehler verwerfen</h2><div class="concept-lead">Ein sichtbarer Fehler kann die spätere Nutzung stark senken.</div><div class="figure" id="fig-human-aversion"></div><div class="concept-caption">Schematischer Verlauf · Fachbegriff: Algorithm Aversion.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Menschen bevorzugen manchmal algorithmische Empfehlungen</h2><div class="concept-lead">Auch das Gegenteil kann vorkommen.</div><div class="figure" id="fig-human-appreciation"></div><div class="concept-caption">Fachbegriff: Algorithm Appreciation.</div></section>
+
+  <section class="slide human-takeaway-slide"><div class="human-takeaway">Das Ziel ist <span>angemessene Nutzung</span>:<br>dort folgen, wo das System verlässlich ist –<br>und dort prüfen oder widersprechen,<br>wo es nötig ist.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Eine Erklärung ist kein Beweis</h2><div class="concept-lead">Plausible Gründe machen eine Empfehlung noch nicht richtig.</div><div class="figure" id="fig-human-explain"></div><div class="concept-caption">Verstehen und Prüfen sind zwei verschiedene Schritte.</div></section>
+
+  <section class="slide human-purposes-slide"><h2>Erklärungen erfüllen verschiedene Zwecke</h2><div class="concept-lead">Die passende Erklärung hängt davon ab, was sie leisten soll.</div><div class="human-purpose-grid"><div>Verstehen<span>Wie kam der Vorschlag zustande?</span></div><div>Fehler finden<span>Welche Annahme stimmt nicht?</span></div><div>Lernen<span>Was lässt sich verbessern?</span></div><div>Rechenschaft<span>Wer kann den Schritt begründen?</span></div></div></section>
+
+  <section class="slide human-figure-slide"><h2>Eine gute Erklärung kann falsches Vertrauen fördern</h2><div class="concept-lead">Überzeugend formuliert ist nicht gleich gut begründet.</div><div class="figure" id="fig-human-false-explain"></div><div class="concept-caption">Eine Gegenprüfung braucht Zugang zu entscheidenden Fakten.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Erst selbst urteilen, dann die KI sehen</h2><div class="concept-lead">Ein eigenes Ersturteil macht Abweichungen sichtbar.</div><div class="figure" id="fig-human-first"></div><div class="concept-caption">Eine mögliche Arbeitsregel für wichtige Fälle.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Gegenargumente machen Prüfbedarf sichtbar</h2><div class="concept-lead">Welche Information würde diese Empfehlung kippen?</div><div class="figure" id="fig-human-counter"></div><div class="concept-caption">Ein erzeugtes Gegenargument ist selbst noch keine Verifikation.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Ein Mensch im Prozess ist noch keine Kontrolle</h2><div class="concept-lead">Wer nur auf „Freigeben“ klickt, muss auch prüfen können.</div><div class="figure" id="fig-human-approve"></div><div class="concept-caption">Information, Zeit und Handlungsspielraum entscheiden über wirksame Aufsicht.</div></section>
+
+  <section class="slide human-pillars-slide"><h2>Wirksame Aufsicht braucht Voraussetzungen</h2><div class="concept-lead">Eine Person braucht Mittel, Zeit und Befugnisse zum Eingreifen.</div><div class="human-pillars"><div>Information</div><div>Verständnis</div><div>Zeit</div><div>Kompetenz</div><div>Eingriffsrecht</div></div><div class="human-pillars-base">wirksame Aufsicht</div><div class="study-source">EU-KI-Verordnung, Art. 14: Anforderungen für Hochrisiko-KI-Systeme</div></section>
+
+  <section class="slide human-figure-slide"><h2>Die Ironie der Automatisierung</h2><div class="concept-lead">Menschen übernehmen oft die seltenen, schwierigen Ausnahmefälle.</div><div class="figure" id="fig-human-irony"></div><div class="concept-caption">Routine verschwindet – Übung für Ausnahmen kann fehlen.</div></section>
+
+  <section class="slide human-figure-slide human-workshift-slide"><h2>KI verschiebt Denkarbeit</h2><div class="concept-lead">Weniger selbst erstellen. Mehr prüfen, einordnen und steuern.</div><div class="figure" id="fig-human-workshift"></div><div class="concept-caption">Die menschliche Arbeit verändert sich; die Nettoentlastung ist offen.</div><div class="study-source">Lee et al. (2025) · Befragung von 319 Wissensarbeitenden</div></section>
+
+  <section class="slide human-figure-slide human-reviewload-slide"><h2>Kontrolle hat eine Belastungsgrenze</h2><div class="concept-lead">Viele plausible Ergebnisse zu prüfen kostet Aufmerksamkeit.</div><div class="figure" id="fig-human-reviewload"></div><div class="concept-caption">Im Pilot auch Prüfzeit und übersehene Fehler messen.</div><div class="study-source">Zhang et al. (2024) · Laborexperiment mit 34 Personen</div></section>
+
+  <section class="slide human-risk-slide"><h2>Wie groß wäre der Schaden?</h2><div class="concept-lead">Mögliche Folgen bestimmen den Prüfbedarf mit.</div><div class="figure" id="fig-human-risk-harm"></div><div class="concept-caption">Ein E-Mail-Entwurf und eine Bestellung haben unterschiedliche Wirkungen.</div></section>
+
+  <section class="slide human-risk-slide"><h2>Lässt sich die Handlung rückgängig machen?</h2><div class="concept-lead">Ein Entwurf ist leichter zu korrigieren als eine ausgelöste Bestellung.</div><div class="figure" id="fig-human-risk-reverse"></div><div class="concept-caption">Umkehrbarkeit kann Kosten und Zeitfenster haben.</div></section>
+
+  <section class="slide human-risk-slide"><h2>Wann würde ein Fehler sichtbar?</h2><div class="concept-lead">Spät erkannte Fehler brauchen frühere Prüfpunkte.</div><div class="figure" id="fig-human-risk-detect"></div><div class="concept-caption">Nachträgliche Kontrolle hilft nur, wenn Folgen noch begrenzt werden können.</div></section>
+
+  <section class="slide human-risk-slide"><h2>Wie unsicher sind Daten und Prognose?</h2><div class="concept-lead">Eine präzise Zahl kann auf lückenhaften Daten beruhen.</div><div class="figure" id="fig-human-risk-uncertain"></div><div class="concept-caption">Nach Datenqualität, Gültigkeitsbereich und Abweichung fragen.</div></section>
+
+  <section class="slide human-risk-four-slide"><h2>Vier Fragen für den Kontrollbedarf</h2><div class="human-risk-four"><div><span>01</span><strong>Schaden?</strong></div><div><span>02</span><strong>Umkehrbarkeit?</strong></div><div><span>03</span><strong>Erkennbarkeit?</strong></div><div><span>04</span><strong>Unsicherheit?</strong></div></div><div class="concept-caption">Gesprächsstruktur, keine automatische Risikobewertung.</div></section>
+
+  <section class="slide human-figure-slide"><h2>Verantwortung beginnt vor dem Modell</h2><div class="concept-lead">Ziele, Daten, Systemwahl und Prozessregeln prägen spätere Entscheidungen.</div><div class="figure" id="fig-human-responsibility"></div><div class="concept-caption">Eine finale Freigabe repariert kein schlechtes Systemdesign.</div></section>
+
+  <section class="slide human-roles-slide"><h2>Wer ist wofür verantwortlich?</h2><div class="concept-lead">Zuständigkeiten müssen vor dem Einsatz feststehen.</div><div class="human-roles-grid"><div><span>Fachbereich</span><strong>Ziele und Folgen klären</strong><p>Welche Entscheidung soll unterstützt werden?</p></div><div><span>Systemverantwortliche</span><strong>Daten, Rechte, Grenzen festlegen</strong><p>Was darf das System sehen und ausführen?</p></div><div><span>Entscheidende Person</span><strong>Prüfen, freigeben, stoppen</strong><p>Wann muss ein Mensch eingreifen?</p></div></div><div class="concept-caption">Konkrete Rollen hängen von Organisation und Anwendung ab.</div></section>
+
+  <section class="slide human-discussion-question"><h2>Diskussion</h2><div class="human-discussion-main">Wenn KI nachweislich besser entscheidet:<br><span>Muss ein Mensch trotzdem freigeben?</span></div><div class="human-discussion-context">Angenommen, der Entscheidungsbereich ist klar umrissen und die KI ist dort zuverlässiger als die Fachleute.</div></section>
+
+  <section class="slide human-position-slide"><h2>Positionslinie: Wo würdet ihr die Grenze ziehen?</h2><div class="human-position-instruction">Positioniert euch. Nennt eine Bedingung, die für euch entscheidend ist. Hört ein Gegenargument an – und entscheidet, ob ihr euch bewegt.</div><div class="figure" id="fig-human-position"></div><div class="human-position-time">20 Minuten</div></section>
+
+  <section class="slide human-debrief-slide"><h2>Was hat eure Position verändert?</h2><div class="human-debrief-grid"><div>Leistung<span>Wie gut ist das System wirklich?</span></div><div>Schaden<span>Was kostet ein Fehler?</span></div><div>Kontrolle<span>Wer kann eingreifen?</span></div><div>Verantwortung<span>Wer trägt die Folgen?</span></div></div><div class="concept-caption">Der Forschungsbefund beantwortet eine Leistungsfrage.</div></section>
+
+  <section class="slide human-takeaway-slide"><div class="human-takeaway">Gute Mensch-KI-Zusammenarbeit<br>verteilt Aufgaben so, dass<br><span>Leistung, Kontrolle und Verantwortung</span><br>zusammenpassen.</div></section>
+
+  <section class="slide reading-slide human-reading-slide"><h2>Weiterlesen: Mensch und KI</h2><div class="reading-grid human-reading-grid"><div class="reading-column"><div class="reading-heading">Aufgabenteilung und Vertrauen</div><a href="https://doi.org/10.1109/3468.844354">Parasuraman et al. (2000)<span>Funktionen der Automatisierung</span></a><a href="https://user.engineering.uiowa.edu/~csl/publications/pdf/leesee04.pdf">Lee &amp; See (2004)<span>Angemessene Nutzung</span></a><a href="https://www.nature.com/articles/s41562-024-02024-1">Vaccaro et al. (2024)<span>Metaanalyse Mensch + KI</span></a><a href="https://arxiv.org/abs/2404.00029">Hemmer et al. (2024)<span>Komplementarität gestalten</span></a></div><div class="reading-column"><div class="reading-heading">Kontrolle und Verantwortung</div><a href="https://doi.org/10.1016/0005-1098(83)90046-8">Bainbridge (1983)<span>Ironie der Automatisierung</span></a><a href="https://doi.org/10.1145/3449287">Buçinca et al. (2021)<span>Prüfung von KI-Empfehlungen</span></a><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF<span>Risikomanagement</span></a><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/deu">EU-KI-Verordnung, Art. 14<span>Menschliche Aufsicht bei Hochrisiko-KI</span></a></div></div></section>
+
+  <section class="slide transfer-title" data-part="Mensch und KI"><div class="content"><div class="part-text">Transfer-Challenge</div></div></section>
+
+  <section class="slide closing-questions-slide" data-part="Mensch und KI"><h2>Fünf Fragen für den Berufsalltag</h2><div class="figure" id="fig-closing-questions"></div></section>
+
+  <section class="slide closing-reflection-slide" data-part="Mensch und KI"><h2>Mein nächster Schritt</h2><div class="closing-reflection-grid"><div><span>Ein Anwendungsfall,</span><strong>den ich prüfen möchte</strong></div><div><span>Eine Aufgabe,</span><strong>die ich nicht vorschnell automatisiere</strong></div><div><span>Eine Prüfroutine,</span><strong>die ich künftig nutze</strong></div></div><div class="closing-reflection-time">2 Minuten für eine persönliche Notiz</div></section>
+
+  <section class="slide closing-hero" data-part="Mensch und KI"><img class="photo" src="img/entscheidung-lebensmittelproduktion.jpg" alt="Qualitätsverantwortliche Person vor einer Entscheidung in der Lebensmittelproduktion"><div class="closing-hero-shade" aria-hidden="true"></div><div class="closing-hero-text">Gute Zusammenarbeit mit KI beginnt damit, <span>die Entscheidung und ihre Verantwortung</span> zu verstehen.</div><div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div></section>
+
+</div>
+<script src="draw.js?v=20260929-38"></script>
+<script src="deck.js?v=20260929-38"></script>
+<script src="stagekit.js?v=20260929-38"></script>
+</body>
+</html>
+
+
