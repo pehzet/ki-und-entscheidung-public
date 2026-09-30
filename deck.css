@@ -18,7 +18,21 @@
 .hero .title-text { font-size: var(--large); line-height: 1.15; }
 .hero .subtitle-text { font-size: var(--small); color: var(--gray-light); line-height: 1.3; margin-top: 46px; }
 .hero-meta { font-size: var(--small); color: var(--gray); line-height: 1.5; margin-top: 72px; }
-.hero .footnote { z-index: 2; }
+.hero .footnote { z-index: 2; left: auto; right: var(--margin); }
+.hero-qr {
+  position: absolute;
+  z-index: 3;
+  left: var(--margin);
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--gray-light);
+  font-size: var(--small);
+  white-space: nowrap;
+}
+.hero-qr img { display: block; width: 176px; height: 176px; background: #fff; }
 
 .opening-question .statement { max-width: 1650px; }
 
