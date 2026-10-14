@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KI und Entscheidung</title>
-  <link rel="stylesheet" href="theme.css?v=20260930-03">
-  <link rel="stylesheet" href="stagekit.css?v=20260930-03">
-  <link rel="stylesheet" href="deck.css?v=20260930-03">
+  <link rel="stylesheet" href="theme.css?v=20261014-02">
+  <link rel="stylesheet" href="stagekit.css?v=20261014-02">
+  <link rel="stylesheet" href="deck.css?v=20261014-02">
 </head>
 <body>
 <div class="deck" data-title="KI und Entscheidung"
      data-subtitle="Hochschule Osnabrück · Philipp Zmijewski · 2026"
-     data-parts='["Entscheidung","KI","Mensch und KI"]'>
+     data-parts='["Entscheiden","KI und Sprachmodelle","Agenten","Mensch und KI","Transfer"]'>
 
-  <section class="slide title hero">
+<section class="slide title hero">
     <img class="photo" src="img/entscheidung-lebensmittelproduktion.jpg"
          alt="Qualitätsverantwortliche Person vor einer Entscheidung in der Lebensmittelproduktion">
     <div class="hero-shade" aria-hidden="true"></div>
@@ -30,42 +30,18 @@
     
   </section>
 
-  <section class="slide opening-question">
-    <div class="content center">
-      <div class="statement">Wann würdet ihr einer KI<br>eine Entscheidung überlassen?</div>
-    </div>
-    
-  </section>
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · Plakat 1</h2><div class="content center"><div class="statement">Wie oft nutzt ihr KI?</div></div></section>
 
-  <section class="slide usage-question">
-    <h2>Wo nutzt ihr KI heute schon?</h2>
-    <div class="usage-grid">
-      <div class="usage-item">
-        <div class="usage-icon" id="icon-create" aria-hidden="true"></div>
-        <div class="usage-label">Erzeugen</div>
-        <div class="usage-text">Wofür nutzt ihr generative KI?</div>
-      </div>
-      <div class="usage-item">
-        <div class="usage-icon" id="icon-recommend" aria-hidden="true"></div>
-        <div class="usage-label">Empfehlen</div>
-        <div class="usage-text">Wo lasst ihr euch Empfehlungen geben?</div>
-      </div>
-      <div class="usage-item">
-        <div class="usage-icon" id="icon-check" aria-hidden="true"></div>
-        <div class="usage-label">Prüfen</div>
-        <div class="usage-text">Wo prüft ihr die Antwort besonders kritisch?</div>
-      </div>
-    </div>
-    
-  </section>
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · Plakat 2</h2><div class="content center"><div class="statement">Wofür nutzt ihr KI vor allem?</div></div></section>
 
-  <section class="slide action-scope">
-    <h2>Vom Text zur Handlung</h2>
-    <div class="figure" id="fig-action-scope"></div>
-    <div class="punch">Je mehr ein System selbst tut, desto klarer müssen Grenzen und Eingriffspunkte sein.</div>
-    <div class="footnote">Nach Parasuraman, Sheridan &amp; Wickens (2000); Anthropic (2024)</div>
-    
-  </section>
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · Plakat 3</h2><div class="content center"><div class="statement">Welcher Begriff im Umfeld von KI ist für euch am unklarsten?</div></div></section>
+
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · Plakat 4</h2><div class="content center"><div class="statement">KI im Berufsalltag ist für mich …</div></div></section>
+
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · Kartenwand</h2><div class="content center"><div class="statement">Was wollt ihr heute mitnehmen?</div></div></section>
+
+
+  <section class="slide photo-hero "><img class="photo" src="img/manny-molk.jpg" alt="Produktionshalle einer Molkerei mit Abfülllinie für Joghurtbecher"><div class="photo-hero-shade" aria-hidden="true"></div><div class="photo-hero-text"><strong>Die Manny Molk GmbH</strong>ist eine erfundene Molkerei. Alle Fälle des Tages spielen dort.</div><div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div></section>
 
   <section class="slide learning-journey">
     <h2>Unser Weg durch den Tag</h2>
@@ -73,15 +49,18 @@
     
   </section>
 
-  <section class="slide part part-choice" data-part="Entscheidung">
+  <section class="slide part part-choice" data-part="Entscheiden">
     <div class="content">
       <div class="part-n">Block 1</div>
       <div class="part-text">Was ist eigentlich<br>eine Entscheidung?</div>
       <div class="part-subtitle">Warum eine gute Prognose noch keine gute Entscheidung ist.</div>
+      <div class="chapter-list"></div>
     </div>
     <div class="part-figure" id="fig-choice"></div>
     
   </section>
+
+  <section class="slide chapter" data-chapter="Was ist eine Entscheidung?"></section>
 
   <section class="slide choice-definition">
     <h2>Eine Entscheidung ist eine Auswahl</h2>
@@ -145,9 +124,12 @@
     
   </section>
 
+  <section class="slide chapter" data-chapter="Entscheidung unter Unsicherheit"></section>
+
   <section class="slide certainty-slide">
-    <h2>Entscheiden ohne Gewissheit</h2>
+    <h2>Sicherheit, Risiko, Ungewissheit</h2>
     <div class="figure" id="fig-certainty"></div>
+    <div class="concept-caption">Die 20 % aus dem Joghurtfall sind eine Risikoangabe: Der Ausgang ist offen, aber eine Wahrscheinlichkeit lässt sich schätzen.</div>
     
   </section>
 
@@ -164,6 +146,8 @@
     
   </section>
 
+  <section class="slide chapter" data-chapter="Bias und Heuristiken"></section>
+
   <section class="slide heuristic-slide">
     <h2>Was ist eine Heuristik?</h2>
     <div class="figure" id="fig-heuristic"></div>
@@ -171,12 +155,20 @@
     
   </section>
 
+  <section class="slide availability-slide">
+    <h2>Verfügbarkeit: Was fällt uns leicht ein?</h2>
+    <div class="figure" id="fig-availability"></div>
+    <div class="concept-caption">Leicht erinnerbare Ereignisse können wahrscheinlicher wirken.</div>
+    
+  </section>
+
   <section class="slide bias-slide">
     <h2>Was ist ein Bias?</h2>
     <div class="figure" id="fig-bias"></div>
-    <div class="bias-caption">Nachfrage wird wiederholt zu optimistisch eingeschätzt.</div>
+    <div class="bias-caption">Ein Bias verschiebt das Urteil immer wieder in dieselbe Richtung, meist ohne dass wir es merken.</div>
     
   </section>
+
 
   <section class="slide bias-codex-slide">
     <h2>Viele Arten von Bias</h2>
@@ -206,20 +198,6 @@
     
   </section>
 
-  <section class="slide availability-slide">
-    <h2>Verfügbarkeit: Was fällt uns leicht ein?</h2>
-    <div class="figure" id="fig-availability"></div>
-    <div class="concept-caption">Leicht erinnerbare Ereignisse können wahrscheinlicher wirken.</div>
-    
-  </section>
-
-  <section class="slide anchoring-slide">
-    <h2>Ankern: Die erste Zahl bleibt hängen</h2>
-    <div class="figure" id="fig-anchoring"></div>
-    <div class="concept-caption">Ein Ausgangswert kann spätere Einschätzungen beeinflussen.</div>
-    
-  </section>
-
   <section class="slide process-outcome-slide">
     <h2>Gute Entscheidung oder gutes Ergebnis?</h2>
     <div class="figure" id="fig-process-outcome"></div>
@@ -234,42 +212,26 @@
     
   </section>
 
-  <section class="slide yogurt-case-slide">
-    <h2>Fallstudie: Die auffällige Joghurtcharge</h2>
-    <div class="case-story">
-      <p>Ihr seid die Produktionsleitung eines mittelständischen Molkereiunternehmens. Am Vormittag wurden 40.000 Becher Naturjoghurt produziert. Die Ware soll noch am selben Nachmittag an mehrere Handelsunternehmen ausgeliefert werden.</p>
-      <p>Bei einer routinemäßigen Qualitätskontrolle liegt ein Messwert knapp außerhalb des unternehmensinternen Zielbereichs. Der gesetzliche Grenzwert wird nicht überschritten. Die Abweichung könnte auf ein Qualitätsproblem hindeuten, kann aber auch durch einen Messfehler entstanden sein.</p>
-      <p>Eine Wiederholungsmessung würde voraussichtlich vier Stunden dauern. Dadurch könnte die geplante Auslieferung nicht mehr rechtzeitig erfolgen. Eine Verzögerung würde zusätzliche Lager- und Transportkosten verursachen. Außerdem könnten einzelne Kunden kurzfristig nicht vollständig beliefert werden.</p>
-      <p>Ihr müsst innerhalb der nächsten 30 Minuten entscheiden.</p>
+  <section class="slide photo-hero activity-hero"><img class="photo" src="img/was-steckt-dahinter.jpg" alt="Hände ordnen auf einem Tisch gelbe Situationskarten und blaue Begriffskarten einander zu"><div class="photo-hero-shade" aria-hidden="true"></div><div class="photo-hero-text"><strong>Was steckt dahinter?</strong>Jetzt seid ihr dran: Ihr ordnet Situationen den passenden Begriffen zu.</div><div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div></section>
+  <section class="slide workshop-activity memory-activity">
+    <h2>Was steckt dahinter?</h2>
+    <div class="concept-lead">Welcher Denkweg steckt hinter der Situation?</div>
+    <div class="task-grid activity-grid">
+      <div class="task-card activity-card"><div class="task-n">01</div><strong>Auslegen</strong><div>Die zehn Situationen offen nebeneinander, die zwölf Begriffe daneben.</div></div>
+      <div class="task-card activity-card"><div class="task-n">02</div><strong>Zuordnen</strong><div>Zu jeder Situation den Begriff, der den Denkweg trifft, mit einer Stelle im Text als Begründung.</div></div>
+      <div class="task-card activity-card"><div class="task-n">03</div><strong>Übrig lassen</strong><div>Zwei Begriffe bleiben übrig: Warum passen sie nirgends?</div></div>
     </div>
-    <div class="case-footnote">Didaktisch konstruierter Fall</div>
+    <div class="task-instruction">10 Situationen · 12 Begriffe · alle Karten offen</div>
     
   </section>
 
-  <section class="slide yogurt-options-slide">
-    <h2>Handlungsoptionen</h2>
-    <div class="option-grid">
-      <div class="option-card"><div class="option-label">A</div><div>Die Charge wird wie geplant ausgeliefert.</div></div>
-      <div class="option-card"><div class="option-label">B</div><div>Die Auslieferung wird gestoppt, bis das Ergebnis der Wiederholungsmessung vorliegt.</div></div>
-      <div class="option-card"><div class="option-label">C</div><div>Es wird sofort eine zusätzliche Schnellprüfung durchgeführt. Diese liefert nach 30 Minuten ein Ergebnis, ist aber weniger zuverlässig als die reguläre Wiederholungsmessung.</div></div>
+  <section class="slide workshop-activity memory-reflection">
+    <h2>Was steckt dahinter? Was habt ihr wiedererkannt?</h2>
+    <div class="activity-reflection-grid">
+      <div class="activity-reflection-card"><strong>Welches Beispiel kam euch bekannt vor?</strong><p>Eine Situation aus Studium, Alltag oder Betrieb.</p></div>
+      <div class="activity-reflection-card"><strong>Wann hilft eine einfache Strategie?</strong><p>Was erleichtert sie – und worauf würdet ihr achten?</p></div>
     </div>
-    
-  </section>
-
-  <section class="slide yogurt-task-slide">
-    <h2>Eure Entscheidung in 15 Minuten</h2>
-    <div class="task-grid">
-      <div class="task-card"><div class="task-n">1</div><div>Was ist euer Ziel?</div><div>Was wisst ihr?</div></div>
-      <div class="task-card"><div class="task-n">2</div><div>Was ist unsicher?</div><div>Welche Prognosen braucht ihr?</div></div>
-      <div class="task-card"><div class="task-n">3</div><div>Welche Folgen bewertet ihr?</div><div>Welche Handlung wählt ihr?</div></div>
-    </div>
-    <div class="task-instruction">Haltet eure Handlung und die Begründung fest.</div>
-    
-  </section>
-
-  <section class="slide debrief-slide">
-    <h2>Was machte die Entscheidung schwierig?</h2>
-    <div class="figure" id="fig-debrief"></div>
+    <div class="task-instruction">Heuristiken können helfen. Ihre Wirkung hängt von der Situation ab.</div>
     
   </section>
 
@@ -298,15 +260,18 @@
     
   </section>
 
-  <section class="slide part part-tech" data-part="KI">
+  <section class="slide part part-tech" data-part="KI und Sprachmodelle">
     <div class="content">
       <div class="part-n">Block 2</div>
       <div class="part-text">Was kann KI<br>eigentlich?</div>
       <div class="part-subtitle">Von festen Regeln zu generativen Modellen.</div>
+      <div class="chapter-list"></div>
     </div>
     <div class="part-figure" id="fig-tech-divider"></div>
     
   </section>
+
+  <section class="slide chapter" data-chapter="Was ist KI?"></section>
 
   <section class="slide ai-definitions-slide">
     <h2>Was meinen wir mit KI?</h2>
@@ -331,13 +296,12 @@
     <div class="umbrella-statement">„KI“ bezeichnet keine einzelne Technologie.</div>
     <div class="ai-map">
       <div class="ai-map-rules">Explizite Regeln</div>
-      <div class="ai-map-learning">Aus Daten gelernte Modelle
+      <div class="ai-map-learning">Machine Learning
         <div class="ai-map-generative">Generative Modelle
           <div class="ai-map-llm">Sprachmodelle</div>
         </div>
       </div>
     </div>
-    <div class="ai-map-agent">Agentische Systeme können Modelle, Regeln, Tools und Abläufe kombinieren.</div>
     
   </section>
 
@@ -346,6 +310,8 @@
     <div class="figure" id="fig-ai-questions"></div>
     
   </section>
+
+  <section class="slide chapter" data-chapter="Regeln, Lernen, Generieren"></section>
 
   <section class="slide rules-slide">
     <h2>Regelbasierte Systeme</h2>
@@ -394,6 +360,13 @@
     
   </section>
 
+  <section class="slide foundation-slide">
+    <h2>Foundation Models</h2>
+    <div class="concept-lead">Ein breit trainiertes Basismodell kann für viele Aufgaben genutzt oder angepasst werden.</div>
+    <div class="figure" id="fig-foundation"></div>
+    
+  </section>
+
   <section class="slide approaches-slide">
     <h2>Regeln, Lernen und Generieren</h2>
     <table class="approaches-table"><thead><tr><th>Prinzip</th><th>Grundidee</th><th>Beispiel</th></tr></thead><tbody>
@@ -405,12 +378,7 @@
     
   </section>
 
-  <section class="slide foundation-slide">
-    <h2>Foundation Models</h2>
-    <div class="concept-lead">Ein breit trainiertes Basismodell kann für viele Aufgaben genutzt oder angepasst werden.</div>
-    <div class="figure" id="fig-foundation"></div>
-    
-  </section>
+  <section class="slide chapter" data-chapter="Wie ein Sprachmodell funktioniert"></section>
 
   <section class="slide llm-slide">
     <h2>Was ist ein Large Language Model?</h2>
@@ -480,6 +448,8 @@
     
   </section>
 
+  <section class="slide chapter" data-chapter="Wie ein Sprachmodell trainiert wird"></section>
+
   <section class="slide pretraining-slide">
     <h2>Pretraining</h2>
     <div class="concept-lead">Das Modell lernt statistische Muster aus großen Datenmengen.</div>
@@ -517,7 +487,6 @@
       <div class="training-data-card"><span>02</span><div>Daten aus<br>Partnerschaften</div></div>
       <div class="training-data-card"><span>03</span><div>Beiträge von Nutzenden,<br>Trainern und Forschenden</div></div>
     </div>
-    <div class="training-data-example"><span>Historisches Beispiel GPT-3</span><div>Common Crawl · WebText2 · Bücher · Wikipedia</div></div>
     <div class="footnote">Keine vollständige Aufschlüsselung für jedes aktuelle ChatGPT-Modell veröffentlicht.</div>
     
   </section>
@@ -543,6 +512,8 @@
     <div class="concept-caption">Post-Training verbessert die Nutzbarkeit, garantiert aber keine Fehlerfreiheit.</div>
     
   </section>
+
+  <section class="slide chapter" data-chapter="Stärken und Grenzen"></section>
 
   <section class="slide llm-strength-slide">
     <h2>Stärke: Sprache strukturieren</h2>
@@ -613,19 +584,23 @@
     
   </section>
 
+  <section class="slide chapter" data-chapter="Gut mit Sprachmodellen arbeiten"></section>
+
   <section class="slide prompt-slide"><h2>Ein Prompt beschreibt die Aufgabe</h2><div class="concept-lead">Was soll das Modell genau tun?</div><div class="prompt-card" data-active="1"></div><div class="prompt-example">„Ordne die Handlungsoptionen für die auffällige Joghurtcharge.“</div></section>
+
   <section class="slide prompt-slide"><h2>Ein Prompt braucht Kontext</h2><div class="concept-lead">Welche Informationen soll das Modell verwenden?</div><div class="prompt-card" data-active="2"></div><div class="prompt-example">Messwert knapp außerhalb des Zielbereichs; Grenzwert eingehalten; Wiederholungsmessung dauert vier Stunden.</div></section>
+
   <section class="slide prompt-slide"><h2>Kriterien explizit machen</h2><div class="concept-lead">Ziele und Grenzen gehören in die Aufgabe.</div><div class="prompt-card" data-active="3"></div><div class="prompt-example">Produktqualität · Lieferfähigkeit · Kosten · rechtliche Anforderungen · Entscheidung in 30 Minuten</div></section>
+
   <section class="slide prompt-slide"><h2>Die Ausgabe strukturieren</h2><div class="concept-lead">Ein Format kann Aussagen leichter prüfbar machen.</div><div class="prompt-card" data-active="4"></div><div class="prompt-example">„Trenne Fakten, Annahmen, offene Fragen und Handlungsoptionen.“</div></section>
+
   <section class="slide prompt-slide"><h2>Unsicherheit sichtbar machen</h2><div class="concept-lead">Frage gezielt nach fehlenden Informationen und unsicheren Annahmen.</div><div class="prompt-card" data-active="5"></div><div class="prompt-example">„Welche Angaben fehlen für eine belastbare Einschätzung?“</div><div class="footnote">Auch diese Nachfrage garantiert nicht, dass alle Lücken erkannt werden.</div></section>
 
   <section class="slide retrieval-slide"><h2>Retrieval: Dokumente zur Laufzeit bereitstellen</h2><div class="concept-lead">Eine Suche kann relevante Passagen in den aktuellen Modellkontext bringen.</div><div class="figure" id="fig-retrieval"></div><div class="concept-caption">Bereitstellen ist kein neues Training.</div></section>
 
-  <section class="slide tools-slide"><h2>Tools erweitern ein Sprachmodell</h2><div class="concept-lead">Ein System kann dem Modell Werkzeuge zur Verfügung stellen.</div><div class="figure" id="fig-tools"></div><div class="concept-caption">Zugriffsrechte und erlaubte Aktionen werden im System festgelegt.</div></section>
+  <section class="slide tools-slide"><h2>Tools erweitern ein Sprachmodell</h2><div class="concept-lead">Ein System kann dem Modell Werkzeuge zur Verfügung stellen.</div><div class="figure" id="fig-tools"></div><div class="concept-caption">Welche Werkzeuge ein Modell bekommt und was sie dürfen, legt das System fest, nicht das Modell.</div></section>
 
   <section class="slide tool-result-slide"><h2>Ein korrektes Tool-Ergebnis genügt nicht</h2><div class="concept-lead">Das Modell kann eine richtige Zahl falsch deuten oder für die falsche Frage verwenden.</div><div class="figure" id="fig-tool-result"></div><div class="concept-caption">Die Interpretation bleibt eine Prüfstelle.</div></section>
-
-  <section class="slide solution-task-slide"><h2>Arbeitsauftrag</h2><div class="task-intro">Wählt für jedes Problem die am besten geeignete technische Lösung:</div><ul class="task-options"><li>einfacher regelbasierter Workflow</li><li>maschinelles Lernen</li><li>Sprachmodell</li><li>agentisches KI-System</li><li>Kombination mehrerer Ansätze</li></ul><div class="task-rationale">Begründet eure Wahl jeweils kurz.</div><div class="task-principle">Entscheidend ist nicht, welche Lösung am modernsten ist, sondern welche das Problem möglichst einfach, zuverlässig und angemessen löst.</div></section>
 
   <section class="slide routine-slide"><h2>Eine robuste LLM-Arbeitsroutine</h2><div class="figure" id="fig-routine"></div><div class="concept-caption">Bei Bedarf beginnt die Schleife erneut mit einer präziseren Aufgabe.</div></section>
 
@@ -633,7 +608,9 @@
 
   <section class="slide reading-slide"><h2>Weiterlesen: Sprachmodelle in der Praxis</h2><div class="reading-grid"><div class="reading-column"><div class="reading-heading">Einstieg</div><a href="https://web.stanford.edu/~jurafsky/slp3/">Jurafsky &amp; Martin<span>Speech and Language Processing</span></a><a href="https://doi.org/10.6028/NIST.AI.600-1">NIST AI 600-1<span>Generative AI Profile · Risiken und Kontrolle</span></a></div><div class="reading-column"><div class="reading-heading">Vertiefung</div><a href="https://arxiv.org/abs/2005.11401">Lewis et al. (2020)<span>Retrieval-Augmented Generation</span></a><a href="https://doi.org/10.1162/tacl_a_00638">Liu et al. (2024)<span>Lost in the Middle · langer Kontext</span></a><a href="https://arxiv.org/abs/2302.04761">Schick et al. (2023)<span>Toolformer · Werkzeuge nutzen</span></a></div></div></section>
 
-  <section class="slide part part-tech part-agent" data-part="KI"><div class="content"><div class="part-n">Vertiefung · KI</div><div class="part-text">Was ändert sich,<br>wenn KI handeln kann?</div><div class="part-subtitle">Vom Sprachmodell zum agentischen System.</div></div><div class="part-figure" id="fig-agent-divider"></div></section>
+  <section class="slide part part-tech part-agent" data-part="Agenten"><div class="content"><div class="part-n">Block 3</div><div class="part-text">Was ändert sich,<br>wenn KI handeln kann?</div><div class="part-subtitle">Vom Sprachmodell zum agentischen System.</div><div class="chapter-list"></div></div><div class="part-figure" id="fig-agent-divider"></div></section>
+
+  <section class="slide chapter" data-chapter="Vom Chatbot zum Agenten"></section>
 
   <section class="slide agent-flow-slide"><h2>Ein einfacher Chatbot antwortet auf eine Anfrage</h2><div class="concept-lead">Eine Eingabe führt zu einer Antwort.</div><div class="figure" id="fig-chatbot"></div></section>
 
@@ -643,41 +620,74 @@
 
   <section class="slide agent-compare-slide"><h2>Chatbot, Workflow und Agent im Vergleich</h2><table class="agent-compare-table"><thead><tr><th>System</th><th>Ablauf</th><th>Handlungsspielraum</th></tr></thead><tbody><tr><td>Chatbot</td><td>einzelne Anfrage</td><td>antwortet</td></tr><tr><td>Workflow</td><td>vorgegebene Schritte</td><td>führt festen Ablauf aus</td></tr><tr><td>Agent</td><td>dynamische Schritte</td><td>wählt nächste Aktion innerhalb von Grenzen</td></tr></tbody></table><div class="concept-caption">Ein Vergleich der Steuerung, keine Rangliste.</div></section>
 
-  <section class="slide agent-system-slide"><h2>Ein Agent ist ein Gesamtsystem</h2><div class="concept-lead">Das Sprachmodell ist eine Komponente.</div><div class="figure" id="fig-agent-system"></div></section>
+  <section class="slide chapter" data-chapter="Agent = Modell + Harness"></section>
 
-  <section class="slide agent-structure-slide"><h2>Der Auftrag gibt eine Richtung vor</h2><div class="concept-lead">Ein Ziel beschreibt, was erreicht werden soll – nicht jeden einzelnen Schritt.</div><div class="figure" id="fig-agent-goal"></div><div class="concept-caption">Beispiel: „Kläre, ob der Rohstoff für morgen ausreicht.“</div></section>
+  <section class="slide photo-hero kitchen-slide"><img class="photo" src="img/kueche-harness.jpg" alt="Restaurantküche mit Koch am Herd, Ausgabe, Bonleiste, Vorratstür und Bondrucker"><div class="figure kitchen-labels" id="fig-kitchen"></div><span data-step="1"></span><span data-step="2"></span><span data-step="3"></span><span data-step="4"></span><div class="footnote right">image: ai-generated (gpt-image-2.5-flare)</div></section>
 
-  <section class="slide agent-structure-slide"><h2>Zustand hält den bisherigen Verlauf fest</h2><div class="concept-lead">Das System muss wissen, was geprüft wurde und was aktuell gilt.</div><div class="figure" id="fig-agent-state"></div><div class="concept-caption">Gespeicherte Angaben können veraltet oder falsch sein.</div></section>
+  <section class="slide agent-system-slide"><h2>Agent = Modell + Harness</h2><div class="concept-lead">Der Harness (deutsch etwa: Gerüst) ist alles um das Modell herum.</div><div class="figure" id="fig-harness"></div><div class="footnote">Architektur nach <a href="https://www.anthropic.com/research/trustworthy-agents" target="_blank" rel="noopener noreferrer">Anthropic (2026)</a>; didaktisch vereinfacht.</div></section>
 
-  <section class="slide agent-structure-slide"><h2>Tools verbinden das System mit seiner Umgebung</h2><div class="concept-lead">Tools können Informationen lesen oder außerhalb des Modells etwas verändern.</div><div class="figure" id="fig-agent-tools"></div><div class="concept-caption">Lesen und Ausführen brauchen unterschiedliche Rechte.</div></section>
+  <section class="slide agent-structure-slide"><div class="harness-mini" id="fig-mini-auftrag" aria-hidden="true"></div><h2>Der Auftrag gibt eine Richtung vor</h2><div class="concept-lead">Ein Ziel beschreibt, was erreicht werden soll – nicht jeden einzelnen Schritt.</div><div class="figure" id="fig-agent-goal"></div><div class="concept-caption">Beispiel: „Kläre, ob der Rohstoff für morgen ausreicht.“</div></section>
 
-  <section class="slide agent-rights-slide"><h2>Berechtigungen bestimmen die möglichen Handlungen</h2><div class="concept-lead">Technisch möglich heißt noch nicht erlaubt.</div><div class="rights-grid"><div class="rights-card"><span>01</span><strong>Lesen</strong><div>Bestand und Lieferdaten abfragen</div></div><div class="rights-card"><span>02</span><strong>Entwurf speichern</strong><div>Bestellung vorbereiten</div></div><div class="rights-card"><span>03</span><strong>Nach außen senden</strong><div>E-Mail an Lieferanten verschicken</div></div><div class="rights-card"><span>04</span><strong>Wirkung auslösen</strong><div>Bestellung oder Löschung ausführen</div></div></div><div class="concept-caption">Rechte für Aufgabe, Tool, Parameter und Wirkung festlegen.</div></section>
+  <section class="slide agent-structure-slide"><div class="harness-mini" id="fig-mini-kontext" aria-hidden="true"></div><h2>Zustand hält den bisherigen Verlauf fest</h2><div class="concept-lead">Das System muss wissen, was geprüft wurde und was aktuell gilt.</div><div class="figure" id="fig-agent-state"></div><div class="concept-caption">Gespeicherte Angaben können veraltet oder falsch sein.</div></section>
 
-  <section class="slide agent-structure-slide"><h2>Steuerungslogik setzt Grenzen für den Ablauf</h2><div class="concept-lead">Das System braucht Bedingungen für Weiterarbeiten, Stoppen und Eskalieren.</div><div class="figure" id="fig-agent-control"></div></section>
+  <section class="slide agent-structure-slide"><div class="harness-mini" id="fig-mini-tools" aria-hidden="true"></div><h2>Tools: wie der Harness nach außen greift</h2><div class="figure" id="fig-agent-tools"></div><div class="concept-caption">Das Modell sieht nur die Beschreibung eines Werkzeugs; ausgeführt wird es vom Harness.</div></section>
 
-  <section class="slide agent-structure-slide"><h2>Planen, Handeln, Beobachten, Aktualisieren</h2><div class="concept-lead">Nach jeder Aktion verändert ein Ergebnis den nächsten Schritt.</div><div class="figure" id="fig-agent-loop"></div><div class="concept-caption">Eine Aktion kann auch nur eine Informationsabfrage sein.</div></section>
+  <section class="slide agent-rights-slide"><div class="harness-mini" id="fig-mini-rechte" aria-hidden="true"></div><h2>Berechtigungen bestimmen die möglichen Handlungen</h2><div class="concept-lead">Technisch möglich heißt noch nicht erlaubt.</div><div class="rights-grid"><div class="rights-card"><span>01</span><strong>Lesen</strong><div>Bestand und Lieferdaten abfragen</div></div><div class="rights-card"><span>02</span><strong>Entwurf speichern</strong><div>Bestellung vorbereiten</div></div><div class="rights-card"><span>03</span><strong>Nach außen senden</strong><div>E-Mail an Lieferanten verschicken</div></div><div class="rights-card"><span>04</span><strong>Wirkung auslösen</strong><div>Bestellung oder Löschung ausführen</div></div></div><div class="concept-caption">Rechte für Aufgabe, Tool, Parameter und Wirkung festlegen.</div></section>
 
-  <section class="slide agent-gate-slide"><h2>Zwischen Vorschlag und Handlung liegt ein Prüfpunkt</h2><div class="concept-lead">Ein vorgeschlagener Tool-Aufruf muss nicht automatisch ausgeführt werden.</div><div class="figure" id="fig-agent-gate"></div><div class="gate-checks">Tool erlaubt? · Parameter erlaubt? · Berechtigung vorhanden? · Freigabe nötig?</div></section>
+  <section class="slide agent-structure-slide"><div class="harness-mini" id="fig-mini-steuerung" aria-hidden="true"></div><h2>Steuerungslogik setzt Grenzen für den Ablauf</h2><div class="concept-lead">Das System braucht Bedingungen für Weiterarbeiten, Stoppen und Eskalieren.</div><div class="figure" id="fig-agent-control"></div></section>
+
+  <section class="slide agent-structure-slide"><h2>Der Harness begleitet jeden Schritt</h2><div class="concept-lead">Das Modell wählt den nächsten Schritt; der Harness prüft und dokumentiert ihn.</div><div class="figure" id="fig-agent-loop"></div><div class="concept-caption">Nach dem Ergebnis: Zustand aktualisieren, weitergehen, stoppen oder eskalieren.</div></section>
+
+  <section class="slide agent-gate-slide"><h2>Der Harness prüft vor wirksamen Handlungen</h2><div class="concept-lead">Beispiel: Eine Bestellung über 10.000 € braucht Freigabe.</div><div class="figure" id="fig-agent-gate"></div><div class="gate-checks">Tool und Parameter erlaubt? · Betrag geprüft? · Freigabe erteilt? · Ausführung protokolliert?</div></section>
+
+  <section class="slide chapter" data-chapter="Autonomie und ihre Risiken"></section>
 
   <section class="slide autonomy-slide"><h2>Autonomie ist ein Spektrum</h2><div class="concept-lead">Wie weit darf das System eigenständig handeln?</div><div class="autonomy-grid"><div class="autonomy-card"><span>01</span><div>empfiehlt</div></div><div class="autonomy-card"><span>02</span><div>bereitet Handlung vor</div></div><div class="autonomy-card"><span>03</span><div>führt begrenzt aus</div></div><div class="autonomy-card"><span>04</span><div>verfolgt Ziel über mehrere Schritte</div></div></div><div class="concept-caption">Die passende Stufe hängt von Aufgabe und Folgen ab.</div></section>
 
-  <section class="slide autonomy-control-slide"><h2>Mehr Handlungsspielraum verlangt bewusstere Kontrollen</h2><div class="concept-lead">Rechtebegrenzung, Beobachtung und Eskalation müssen zur Wirkung passen.</div><div class="autonomy-compare"><div class="autonomy-variant"><span>Variante A</span><strong>nur Empfehlung</strong><div>Ergebnis prüfen</div></div><div class="autonomy-variant autonomy-variant-active"><span>Variante B</span><strong>Bestellung auslösen</strong><div>Rechte begrenzen · Betrag prüfen · Freigabe einholen · Ausführung protokollieren</div></div></div><div class="concept-caption">Kontrollbedarf hängt auch von Schaden, Erkennbarkeit und Umkehrbarkeit ab.</div></section>
+  <section class="slide photo-hero news-slide"><img class="photo" src="img/agenten-nachrichten.jpg" alt="Smartphone mit unscharfem Nachrichtenfeed neben Zeitung und Kaffeetasse"><div class="photo-hero-shade" aria-hidden="true"></div><div class="photo-hero-text">Was habt ihr über KI&#8209;Agenten in den Nachrichten mitbekommen?</div><div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div></section>
+
+  <section class="slide risk-map-slide has-punch"><h2>Wo kann es schiefgehen?</h2><div class="figure" id="fig-risk-map"></div><ol class="risk-legend"><li data-step="1"><span>1</span>Fehleinschätzung des Modells</li><li data-step="2"><span>2</span>fremde Anweisungen im Kontext</li><li data-step="3"><span>3</span>zu weite Befugnisse</li><li data-step="4"><span>4</span>Erweiterungen von Dritten</li><li data-step="5"><span>5</span>Fehler pflanzen sich fort</li><li data-step="6"><span>6</span>Wirkung lässt sich nicht zurücknehmen</li></ol><div class="punch" data-step="6">Die meisten Risiken eines Agenten liegen nicht im Modell, sondern in dem, was der Harness zulässt.</div></section>
+
+  <section class="slide agent-structure-slide injection-slide"><h2>Fremder Text wird zur Anweisung</h2><div class="figure" id="fig-injection"></div><span data-step="1"></span><span data-step="2"></span><div class="concept-caption">Für das Modell ist alles Text, auch das, was nur gelesen werden sollte.</div></section>
+
+  <section class="slide trifecta-slide has-punch" data-on-show="trifectaStep" data-on-step="trifectaStep"><h2>Die gefährliche Dreierkombination</h2><div class="figure" id="fig-trifecta"></div><span data-step="1"></span><span data-step="2"></span><div class="punch">Ein Agent, der fremde Inhalte liest, sollte nicht zugleich private Daten sehen und nach außen senden dürfen.</div><div class="footnote">Nach <a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/" target="_blank" rel="noopener noreferrer">Willison (2025)</a></div></section>
+
+  <section class="slide agent-rights-slide no-undo-slide"><h2>Zu viel Befugnis, keine Umkehr</h2><div class="rights-grid"><div class="rights-card"><span>01</span><strong>Lesen</strong><div>Bestand und Lieferdaten abfragen</div></div><div class="rights-card"><span>02</span><strong>Entwurf speichern</strong><div>Bestellung vorbereiten</div></div><div class="rights-card"><span>03</span><strong>Nach außen senden</strong><div>E-Mail an Lieferanten verschicken</div></div><div class="rights-card danger"><span>04</span><strong>Wirkung auslösen</strong><div>Löschen in den echten Daten</div></div></div><div class="cause-grid"><div>keine Trennung von Test und Betrieb</div><div>kein Stopp vor zerstörenden Befehlen</div><div>keine geprüfte Sicherung</div></div><div class="concept-caption">Ein Fehler wird erst dann teuer, wenn das System die Rechte hat, ihn auszuführen.</div></section>
+
+  <section class="slide agent-structure-slide"><h2>Erweiterungen von Dritten</h2><div class="figure" id="fig-plugins"></div><div class="concept-caption">Eine Erweiterung arbeitet mit den Rechten des Agenten, auch wenn sie von einem Fremden stammt.</div></section>
 
   <section class="slide agent-error-slide"><h2>Fehler können sich über Schritte fortpflanzen</h2><div class="concept-lead">Ein falscher Zwischenstand kann spätere Aktionen fehlleiten.</div><div class="figure" id="fig-agent-error"></div><div class="concept-caption">Ein früher Prüfpunkt kann die Kette unterbrechen.</div></section>
 
-  <section class="slide agent-fit-slide"><h2>Nicht jedes Problem braucht einen Agenten</h2><div class="concept-lead">Ein fester Workflow passt gut, wenn Schritte und Ausnahmen vorhersehbar sind.</div><div class="figure" id="fig-agent-fit"></div><div class="concept-caption">Dynamische Planung hilft bei offenen, wechselnden Schritten.</div></section>
+  <section class="slide stages-slide has-punch"><h2>Im Betrieb, im Test oder befürchtet?</h2><div class="stage-grid"><div><span>1</span><strong>im Betrieb passiert</strong><p>Agent löscht Produktivdaten</p></div><div><span>2</span><strong>im Test, aber mit echter Wirkung</strong><p>Testagent dringt in fremde Systeme ein</p></div><div><span>3</span><strong>nur im Test gezeigt</strong><p>Modell droht in einer Simulation</p></div><div><span>4</span><strong>befürchtet</strong><p>KI entzieht sich jeder Kontrolle</p></div></div><div class="punch">Wer eine Meldung einordnen will, fragt zuerst, wo sie passiert ist.</div></section>
 
-  <section class="slide agent-case-slide"><h2>Fallstudie: Der Rohstoff für morgen</h2><div class="case-prose">Ein Lebensmittelunternehmen will morgen früh eine Charge produzieren. Dafür wird ein kritischer Rohstoff benötigt. Am späten Nachmittag meldet die Produktionsplanung, dass der verfügbare Bestand möglicherweise nicht reicht. Im ERP ist zwar noch Ware verzeichnet, aber die letzte Lieferung wurde nicht eindeutig verbucht.<br><br>Die Produktionsleitung bittet ein agentisches System, die Versorgungslage zu klären und einen sicheren nächsten Schritt vorzubereiten. Fehlt der Rohstoff, kann die Produktion nicht planmäßig starten. Eine unnötige Eilbestellung würde dagegen zusätzliche Kosten verursachen. Bis Feierabend braucht die Leitung eine begründete Empfehlung.</div></section>
+  <section class="slide headline-check-slide"><h2>Eine Meldung einordnen</h2><ol class="question-list"><li data-step="1"><span>1</span>Im Betrieb, im Test oder befürchtet?</li><li data-step="2"><span>2</span>Welche Rechte hatte der Agent?</li><li data-step="3"><span>3</span>Woher kam die Eingabe, die ihn auf Abwege brachte?</li><li data-step="4"><span>4</span>Gab es einen Prüfpunkt vor der Wirkung?</li><li data-step="5"><span>5</span>Ließ sich die Wirkung zurücknehmen?</li></ol></section>
 
-  <section class="slide agent-case-slide agent-assignment-slide"><h2>Arbeitsauftrag: Wir spielen ein agentisches System</h2><div class="case-prose">Verteilt in eurer Gruppe die Rollen Planungssystem, ERP, Lieferantendatenbank, Freigabeverantwortliche Person und Risikobeobachtung. Das Planungssystem entscheidet nach jeder neuen Information, welche Abfrage oder Handlung als Nächstes sinnvoll ist.<br><br>Die anderen Rollen antworten nur auf tatsächlich gestellte Anfragen. Haltet für jeden Schritt fest, welche Information vorlag, welche Berechtigung nötig wäre und an welchem Punkt ein Mensch freigeben oder übernehmen muss.</div><div class="case-time">15–20 Minuten</div></section>
+  <section class="slide counter-slide has-punch"><h2>Was dagegen hilft</h2><div class="counter-list"><div><span>Rechte und Freigaben</span>nur nötige Rechte, Freigabe vor folgenreichen Aktionen</div><div><span>Kontext</span>fremde Inhalte nie als Anweisung behandeln</div><div><span>Tools</span>Erweiterungen prüfen sowie Test und Betrieb trennen</div><div><span>Steuerung</span>Stopp bei Widersprüchen, Grenzen für Schrittzahl und Betrag</div><div><span>Protokoll</span>jede Aktion nachvollziehbar festhalten und beobachten</div></div><div class="punch">Fast alles, was einen Agenten sicherer macht, steckt im Harness und nicht im Modell.</div></section>
 
-  <section class="slide agent-debrief-slide"><h2>Wo lag das eigentliche Risiko?</h2><div class="concept-lead">Modell · Daten · Tools · Berechtigungen · Eskalation</div><div class="figure" id="fig-agent-debrief"></div></section>
+  <section class="slide agent-fit-slide has-punch"><h2>Nicht jedes Problem braucht einen Agenten</h2><div class="concept-lead">Ein fester Workflow passt gut, wenn Schritte und Ausnahmen vorhersehbar sind.</div><div class="figure" id="fig-agent-fit"></div><div class="concept-caption">Dynamische Planung hilft bei offenen, wechselnden Schritten.</div><div class="punch">Die sicherste Befugnis ist die, die ein System gar nicht erst bekommt.</div></section>
 
-  <section class="slide agent-takeaway-slide"><div class="agent-takeaway">Agentisch ist das <span>Gesamtsystem</span>:<br>Modell, Zustand, Tools,<br>Berechtigungen, Steuerung<br>und Kontrollpunkte.</div></section>
+  <section class="slide workshop-activity agent-design-activity">
+    <h2>Agentendesign: Entwerft einen Agenten samt Harness</h2>
+    <div class="concept-lead">Auftrag · Kontext · Tools · Rechte · Kontrolle</div>
+    <div class="task-grid activity-grid">
+      <div class="task-card activity-card"><div class="task-n">01</div><strong>Auftrag abgrenzen</strong><div>Wählt innerhalb eures Anwendungsgebiets eine konkrete Unterstützungsaufgabe.</div></div>
+      <div class="task-card activity-card"><div class="task-n">02</div><strong>Harness entwerfen</strong><div>Skizziert das Zusammenspiel von Modell, Zustand, Tools und Kontrollen.</div></div>
+      <div class="task-card activity-card"><div class="task-n">03</div><strong>Risiken abwägen</strong><div>Begründet die Rechte und Grenzen. Prüft euren Entwurf an einem Fehlerfall.</div></div>
+    </div>
+    <div class="activity-timing">Richtwert: ca. 30 Minuten insgesamt</div>
+    <div class="task-instruction">Arbeitsauftrag + Anwendungsgebiet + A3-Designcanvas · Zeitaufteilung wird vor Ort angesagt</div>
+    
+  </section>
 
-  <section class="slide reading-slide"><h2>Weiterlesen: Agentische Systeme</h2><div class="reading-grid agent-reading-grid"><div class="reading-column"><div class="reading-heading">Einstieg</div><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic (2024)<span>Building Effective Agents</span></a><a href="https://arxiv.org/abs/2210.03629">Yao et al. (2022/2023)<span>ReAct · Planen und Handeln</span></a><div class="reading-heading">Sicherheit</div><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF<span>Risikomanagement</span></a><a href="https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations">NIST CAISI (2025)<span>Agent Hijacking Evaluations</span></a></div><div class="reading-column"><div class="reading-heading">Vertiefung</div><a href="https://arxiv.org/abs/2308.11432">Wang et al. (2023/2025)<span>Survey zu LLM-Agenten</span></a><a href="https://arxiv.org/abs/2302.04761">Schick et al. (2023)<span>Toolformer · Toolnutzung</span></a><a href="https://doi.org/10.1109/3468.844354">Parasuraman et al. (2000)<span>Stufen der Automatisierung</span></a></div></div></section>
+  <section class="slide agent-debrief-slide"><h2>Welche Befugnis habt ihr begrenzt?</h2><div class="concept-lead">Nutzen · Fehlerfolge · Kontrolle · Restrisiko</div><div class="figure" id="fig-agent-debrief"></div></section>
 
-  <section class="slide part part-tech part-human" data-part="Mensch und KI"><div class="content"><div class="part-n">Block 3</div><div class="part-text">Wer sollte<br>was entscheiden?</div><div class="part-subtitle">Aufgabenteilung, Vertrauen, Kontrolle und Verantwortung.</div></div><div class="part-figure" id="fig-human-divider"></div></section>
+  <section class="slide agent-takeaway-slide"><div class="agent-takeaway">Ein Agent besteht aus <span>Modell und Harness</span>,<br>und was er bewirkt,<br>geschieht in der Umgebung.</div></section>
+
+  <section class="slide reading-slide"><h2>Weiterlesen: Agentische Systeme</h2><div class="reading-grid agent-reading-grid"><div class="reading-column"><div class="reading-heading">Einstieg</div><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic (2024)<span>Building Effective Agents</span></a><a href="https://arxiv.org/abs/2210.03629">Yao et al. (2022/2023)<span>ReAct · Planen und Handeln</span></a><div class="reading-heading">Sicherheit</div><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF<span>Risikomanagement</span></a><a href="https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations">NIST CAISI (2025)<span>Agent Hijacking Evaluations</span></a><a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">OWASP (2025)<span>Top 10 for Agentic Applications</span></a><a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/">Willison (2025)<span>The lethal trifecta</span></a></div><div class="reading-column"><div class="reading-heading">Vertiefung</div><a href="https://arxiv.org/abs/2308.11432">Wang et al. (2023/2025)<span>Survey zu LLM-Agenten</span></a><a href="https://arxiv.org/abs/2302.04761">Schick et al. (2023)<span>Toolformer · Toolnutzung</span></a><a href="https://doi.org/10.1109/3468.844354">Parasuraman et al. (2000)<span>Stufen der Automatisierung</span></a></div></div></section>
+
+  <section class="slide part part-tech part-human" data-part="Mensch und KI"><div class="content"><div class="part-n">Block 4</div><div class="part-text">Wer sollte<br>was entscheiden?</div><div class="part-subtitle">Aufgabenteilung, Vertrauen, Kontrolle und Verantwortung.</div><div class="chapter-list"></div></div><div class="part-figure" id="fig-human-divider"></div></section>
+
+  <section class="slide chapter" data-chapter="Aufgaben entlang der Kette"></section>
 
   <section class="slide human-chain-slide"><h2>Zurück zur Entscheidungskette</h2><div class="concept-lead">Für jeden Schritt fragen wir: Mensch, KI oder beide?</div><div class="figure" id="fig-human-chain-all"></div></section>
 
@@ -691,9 +701,48 @@
 
   <section class="slide human-chain-slide"><h2>KI kann eine Auswahl vorbereiten</h2><div class="concept-lead">Sortieren und empfehlen setzt Kriterien voraus.</div><div class="figure" id="fig-human-chain-select"></div><div class="concept-caption">Wer legt Kriterien und Gewichtungen fest?</div></section>
 
+  <section class="slide decision-model-intro-slide">
+    <h2>Decision Models: Wahrscheinlichkeiten statt Text</h2>
+    <div class="decision-headline">Vorgegebene Antworttypen und Wahrscheinlichkeiten statt frei formulierter Antworten.</div>
+    <div class="decision-compare">
+      <div class="decision-compare-card">
+        <div class="decision-card-label">Sprachmodell</div>
+        <div class="decision-card-title">Offene Ausgabe</div>
+        <div class="decision-text-example">„Der Prüfbericht deutet auf eine kritische Abweichung hin …“</div>
+        <div class="decision-card-detail">Kann Text und auch strukturierte Antworten erzeugen.</div>
+      </div>
+      <div class="decision-compare-card decision-specialized">
+        <div class="decision-card-label">Decision Model · Jev / Clef</div>
+        <div class="decision-card-title">Typisierte Auswahl</div>
+        <div class="decision-prob-row"><span>kritisch</span><strong>78 %</strong><div class="decision-prob-bar"><i style="width:78%"></i></div></div>
+        <div class="decision-prob-row"><span>unkritisch</span><strong>22 %</strong><div class="decision-prob-bar"><i style="width:22%"></i></div></div>
+        <div class="decision-card-detail">Antwortoptionen sind vorher festgelegt.</div>
+      </div>
+    </div>
+    <div class="decision-caption">Eine Software kann diese Wahrscheinlichkeiten direkt weiterverarbeiten.</div>
+    <div class="footnote">Beispielwerte · Quellen: <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener noreferrer">TypeSafe AI (2026)</a>, <a href="https://blog.cloudflare.com/clef-decision-models/" target="_blank" rel="noopener noreferrer">Cloudflare (2026)</a></div>
+    
+  </section>
+
+  <section class="slide decision-threshold-slide has-punch">
+    <h2>Wer setzt die Schwelle?</h2>
+    <div class="decision-headline">Modellwahrscheinlichkeit für „kritisch“ bei einem Prüfbericht</div>
+    <div class="threshold">
+      <div class="threshold-bar"><div class="zone z1" data-step="1" style="width:20%"></div><div class="zone z2" data-step="1" style="width:70%"></div><div class="zone z3" data-step="1" style="width:10%"></div><div class="threshold-marker" style="left:78%"><span>78 %</span></div></div>
+      <div class="threshold-scale"><span style="left:0">0 %</span><span style="left:20%" data-step="1">20 %</span><span style="left:90%" data-step="1">90 %</span><span style="left:100%">100 %</span></div>
+      <div class="threshold-labels" data-step="1"><div class="t1"><strong>unter 20 %</strong>automatisch weiter</div><div class="t2"><strong>20 bis 90 %</strong>Fachperson prüft</div><div class="t3"><strong>über 90 %</strong>Charge sperren, Freigabe durch die QS-Leitung</div></div>
+    </div>
+    <div class="figure threshold-chain" id="fig-threshold-chain" data-step="2"></div>
+    <div class="punch">Die Schwelle ist eine Bewertung, und die trifft der Betrieb, nicht das Modell.</div>
+    <div class="footnote">Schwellen sind Beispielwerte.</div>
+    
+  </section>
+
   <section class="slide human-chain-slide"><h2>KI kann Handlungen ausführen</h2><div class="concept-lead">Aus einer Empfehlung wird eine Wirkung außerhalb des Systems.</div><div class="figure" id="fig-human-chain-action"></div><div class="concept-caption">Beispiel: Empfehlung → Freigabe oder Grenze → Bestellung</div></section>
 
   <section class="slide human-four-slide"><h2>Vier Funktionen von Automatisierung</h2><div class="concept-lead">In jeder Funktion kann unterschiedlich viel automatisiert werden.</div><div class="human-four-grid"><div><span>01</span><strong>Information beschaffen</strong><p>Lieferdaten finden</p></div><div><span>02</span><strong>Information analysieren</strong><p>Verspätung prognostizieren</p></div><div><span>03</span><strong>Auswahl unterstützen</strong><p>Alternativen ordnen</p></div><div><span>04</span><strong>Handlung ausführen</strong><p>Bestellung auslösen</p></div></div><div class="concept-caption">Nach Parasuraman, Sheridan &amp; Wickens (2000).</div></section>
+
+  <section class="slide chapter" data-chapter="Mensch-KI-Teams"></section>
 
   <section class="slide human-study-slide"><h2>Mensch und KI zusammen sind nicht automatisch besser</h2><div class="concept-lead">Das Team muss sich mit dem jeweils besseren Einzelbeitrag messen.</div><div class="figure" id="fig-human-study-baseline"></div><div class="study-source">Vaccaro, Almaatouq &amp; Malone (2024) · 106 Experimente</div></section>
 
@@ -703,13 +752,13 @@
 
   <section class="slide human-compare-slide"><h2>Wo können Mensch und KI jeweils beitragen?</h2><div class="human-compare-grid"><div><span>KI kann helfen bei</span><strong>Umfang · Tempo · Muster</strong><p>viele Lieferdaten auswerten<br>gleiche Regeln konsistent anwenden</p></div><div><span>Menschen bringen ein</span><strong>Ziele · Kontext · Verantwortung</strong><p>Folgen gegeneinander abwägen<br>Ausnahmen und Betroffene einordnen</p></div></div><div class="concept-caption">Mögliche Stärken – die konkrete Leistung muss geprüft werden.</div></section>
 
+  <section class="slide chapter" data-chapter="Vertrauen und Erklärungen"></section>
+
   <section class="slide human-figure-slide"><h2>Vertrauen ist keine Ja-oder-Nein-Frage</h2><div class="concept-lead">Entscheidend ist, ob die Nutzung zur tatsächlichen Zuverlässigkeit passt.</div><div class="figure" id="fig-human-trust"></div><div class="concept-caption">Schematisch: keine Messwerte und keine festen Schwellen.</div></section>
 
   <section class="slide human-figure-slide"><h2>Zu viel Vertrauen: ungeprüft übernehmen</h2><div class="concept-lead">Eine falsche Empfehlung kann zum Anker der Entscheidung werden.</div><div class="figure" id="fig-human-overreliance"></div><div class="concept-caption">Zeitdruck und überzeugende Darstellung können die Prüfung erschweren.</div></section>
 
-  <section class="slide human-figure-slide"><h2>Zu wenig Vertrauen: nach einem Fehler verwerfen</h2><div class="concept-lead">Ein sichtbarer Fehler kann die spätere Nutzung stark senken.</div><div class="figure" id="fig-human-aversion"></div><div class="concept-caption">Schematischer Verlauf · Fachbegriff: Algorithm Aversion.</div></section>
-
-  <section class="slide human-figure-slide"><h2>Menschen bevorzugen manchmal algorithmische Empfehlungen</h2><div class="concept-lead">Auch das Gegenteil kann vorkommen.</div><div class="figure" id="fig-human-appreciation"></div><div class="concept-caption">Fachbegriff: Algorithm Appreciation.</div></section>
+  <section class="slide human-figure-slide"><h2>Zu wenig Vertrauen, manchmal auch zu viel</h2><div class="concept-lead">Nach einem sichtbaren Fehler sinkt die Nutzung oft stark; unter anderen Bedingungen bevorzugen Menschen dagegen algorithmische Empfehlungen.</div><div class="figure" id="fig-human-aversion"></div><div class="concept-caption">Schematischer Verlauf · Fachbegriff: Algorithm Aversion.</div></section>
 
   <section class="slide human-takeaway-slide"><div class="human-takeaway">Das Ziel ist <span>angemessene Nutzung</span>:<br>dort folgen, wo das System verlässlich ist –<br>und dort prüfen oder widersprechen,<br>wo es nötig ist.</div></section>
 
@@ -723,6 +772,8 @@
 
   <section class="slide human-figure-slide"><h2>Gegenargumente machen Prüfbedarf sichtbar</h2><div class="concept-lead">Welche Information würde diese Empfehlung kippen?</div><div class="figure" id="fig-human-counter"></div><div class="concept-caption">Ein erzeugtes Gegenargument ist selbst noch keine Verifikation.</div></section>
 
+  <section class="slide chapter" data-chapter="Wirksame Aufsicht"></section>
+
   <section class="slide human-figure-slide"><h2>Ein Mensch im Prozess ist noch keine Kontrolle</h2><div class="concept-lead">Wer nur auf „Freigeben“ klickt, muss auch prüfen können.</div><div class="figure" id="fig-human-approve"></div><div class="concept-caption">Information, Zeit und Handlungsspielraum entscheiden über wirksame Aufsicht.</div></section>
 
   <section class="slide human-pillars-slide"><h2>Wirksame Aufsicht braucht Voraussetzungen</h2><div class="concept-lead">Eine Person braucht Mittel, Zeit und Befugnisse zum Eingreifen.</div><div class="human-pillars"><div>Information</div><div>Verständnis</div><div>Zeit</div><div>Kompetenz</div><div>Eingriffsrecht</div></div><div class="human-pillars-base">wirksame Aufsicht</div><div class="study-source">EU-KI-Verordnung, Art. 14: Anforderungen für Hochrisiko-KI-Systeme</div></section>
@@ -732,6 +783,8 @@
   <section class="slide human-figure-slide human-workshift-slide"><h2>KI verschiebt Denkarbeit</h2><div class="concept-lead">Weniger selbst erstellen. Mehr prüfen, einordnen und steuern.</div><div class="figure" id="fig-human-workshift"></div><div class="concept-caption">Die menschliche Arbeit verändert sich; die Nettoentlastung ist offen.</div><div class="study-source">Lee et al. (2025) · Befragung von 319 Wissensarbeitenden</div></section>
 
   <section class="slide human-figure-slide human-reviewload-slide"><h2>Kontrolle hat eine Belastungsgrenze</h2><div class="concept-lead">Viele plausible Ergebnisse zu prüfen kostet Aufmerksamkeit.</div><div class="figure" id="fig-human-reviewload"></div><div class="concept-caption">Im Pilot auch Prüfzeit und übersehene Fehler messen.</div><div class="study-source">Zhang et al. (2024) · Laborexperiment mit 34 Personen</div></section>
+
+  <section class="slide chapter" data-chapter="Kontrollbedarf und Verantwortung"></section>
 
   <section class="slide human-risk-slide"><h2>Wie groß wäre der Schaden?</h2><div class="concept-lead">Mögliche Folgen bestimmen den Prüfbedarf mit.</div><div class="figure" id="fig-human-risk-harm"></div><div class="concept-caption">Ein E-Mail-Entwurf und eine Bestellung haben unterschiedliche Wirkungen.</div></section>
 
@@ -749,28 +802,75 @@
 
   <section class="slide human-discussion-question"><h2>Diskussion</h2><div class="human-discussion-main">Wenn KI nachweislich besser entscheidet:<br><span>Muss ein Mensch trotzdem freigeben?</span></div><div class="human-discussion-context">Angenommen, der Entscheidungsbereich ist klar umrissen und die KI ist dort zuverlässiger als die Fachleute.</div></section>
 
-  <section class="slide human-position-slide"><h2>Positionslinie: Wo würdet ihr die Grenze ziehen?</h2><div class="human-position-instruction">Positioniert euch. Nennt eine Bedingung, die für euch entscheidend ist. Hört ein Gegenargument an – und entscheidet, ob ihr euch bewegt.</div><div class="figure" id="fig-human-position"></div><div class="human-position-time">20 Minuten</div></section>
-
-  <section class="slide human-debrief-slide"><h2>Was hat eure Position verändert?</h2><div class="human-debrief-grid"><div>Leistung<span>Wie gut ist das System wirklich?</span></div><div>Schaden<span>Was kostet ein Fehler?</span></div><div>Kontrolle<span>Wer kann eingreifen?</span></div><div>Verantwortung<span>Wer trägt die Folgen?</span></div></div><div class="concept-caption">Der Forschungsbefund beantwortet eine Leistungsfrage.</div></section>
+  <section class="slide human-debrief-slide"><h2>Welche Bedingungen bestimmen eure Antwort?</h2><div class="human-debrief-grid"><div>Leistung<span>Wie gut ist das System wirklich?</span></div><div>Schaden<span>Welche Folgen hätte ein Fehler?</span></div><div>Kontrolle<span>Wer kann wirksam eingreifen?</span></div><div>Verantwortung<span>Wer trägt die Folgen?</span></div></div><div class="concept-caption">Gemessene Leistung ist eine Grundlage der Aufgabenteilung.</div></section>
 
   <section class="slide human-takeaway-slide"><div class="human-takeaway">Gute Mensch-KI-Zusammenarbeit<br>verteilt Aufgaben so, dass<br><span>Leistung, Kontrolle und Verantwortung</span><br>zusammenpassen.</div></section>
 
   <section class="slide reading-slide human-reading-slide"><h2>Weiterlesen: Mensch und KI</h2><div class="reading-grid human-reading-grid"><div class="reading-column"><div class="reading-heading">Aufgabenteilung und Vertrauen</div><a href="https://doi.org/10.1109/3468.844354">Parasuraman et al. (2000)<span>Funktionen der Automatisierung</span></a><a href="https://user.engineering.uiowa.edu/~csl/publications/pdf/leesee04.pdf">Lee &amp; See (2004)<span>Angemessene Nutzung</span></a><a href="https://www.nature.com/articles/s41562-024-02024-1">Vaccaro et al. (2024)<span>Metaanalyse Mensch + KI</span></a><a href="https://arxiv.org/abs/2404.00029">Hemmer et al. (2024)<span>Komplementarität gestalten</span></a></div><div class="reading-column"><div class="reading-heading">Kontrolle und Verantwortung</div><a href="https://doi.org/10.1016/0005-1098(83)90046-8">Bainbridge (1983)<span>Ironie der Automatisierung</span></a><a href="https://doi.org/10.1145/3449287">Buçinca et al. (2021)<span>Prüfung von KI-Empfehlungen</span></a><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF<span>Risikomanagement</span></a><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/deu">EU-KI-Verordnung, Art. 14<span>Menschliche Aufsicht bei Hochrisiko-KI</span></a></div></div></section>
 
-  <section class="slide transfer-title" data-part="Mensch und KI"><div class="content"><div class="part-text">Transfer-Challenge</div></div></section>
+  <section class="slide part part-tech" data-part="Transfer"><div class="content"><div class="part-n">Block 5</div><div class="part-text">Wie bringe ich KI<br>in meinen Prozess?</div><div class="part-subtitle">Transfer-Challenge und Abschluss.</div></div></section>
 
-  <section class="slide closing-questions-slide" data-part="Mensch und KI"><h2>Fünf Fragen für den Berufsalltag</h2><div class="figure" id="fig-closing-questions"></div></section>
+  <section class="slide photo-hero activity-hero"><img class="photo" src="img/transfer-challenge.jpg" alt="Hände zeichnen auf einem A3-Bogen einen Prozess in drei Bahnen, daneben Haftnotizen und Stifte"><div class="photo-hero-shade" aria-hidden="true"></div><div class="photo-hero-text"><strong>Transfer-Challenge</strong>Jetzt seid ihr dran: Ihr gestaltet einen Prozess, in dem Menschen und KI zusammenarbeiten.</div><div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div></section>
+  <section class="slide workshop-activity transfer-activity">
+    <h2>Transfer-Challenge: Euer Auftrag</h2>
+    <div class="concept-lead">Als Projektteam verbessert ihr einen wiederkehrenden Prozess.</div>
+    <div class="transfer-grid">
+      <div class="task-card"><strong><span class="task-n">01</span>Problem und Ziel</strong><div>Engpass, Auslöser und gewünschtes Ergebnis in zwei Sätzen</div></div>
+      <div class="task-card"><strong><span class="task-n">02</span>Neuer Ablauf</strong><div>Vier bis fünf Schritte für Mensch, Technik und bestehende Systeme</div></div>
+      <div class="task-card"><strong><span class="task-n">03</span>Kritischer Übergang</strong><div>Eine Stelle, an der ein Fehler Folgen hätte: Wer prüft, was passiert dann?</div></div>
+      <div class="task-card"><strong><span class="task-n">04</span>Kleiner Pilot</strong><div>Ein Normalfall, ein kritischer Fall, ein Erfolgs- und ein Abbruchkriterium</div></div>
+    </div>
+    <div class="activity-timing">Richtwert: ca. 60 Minuten insgesamt</div>
+    <div class="task-instruction">Arbeitsauftrag mit Startfällen + A3-Prozesscanvas · Zeitaufteilung wird vor Ort angesagt</div>
+    
+  </section>
+  <section class="slide workshop-activity transfer-cases">
+    <h2>Transfer-Challenge: Startfälle</h2>
+    <div class="concept-lead">Wählt einen Startfall und legt euch gleich zu Beginn fest.</div>
+    <div class="task-grid activity-grid">
+      <div class="task-card activity-card"><div class="task-n">A</div><strong>Auditberichte erschließen</strong><div>Abweichungen und Fristen aus langen Berichten in eine Maßnahmenliste übertragen</div></div>
+      <div class="task-card activity-card"><div class="task-n">B</div><strong>Lieferanten&shy;dokumente prüfen</strong><div>Eingehende Unterlagen mit den ERP-Stammdaten abgleichen und Rückfragen vorbereiten</div></div>
+      <div class="task-card activity-card"><div class="task-n">C</div><strong>Qualitäts&shy;abweichungen früher erkennen</strong><div>Aus Produktionsdaten ableiten, welche Charge genauer geprüft wird</div></div>
+    </div>
+    <div class="task-instruction">Oder ein eigener Prozess, so konkret wie diese drei</div>
+    
+  </section>
+  <section class="slide transfer-flow-slide">
+    <h2>Transfer-Challenge: Ablauf</h2>
+    <div class="figure" id="fig-transfer-flow"></div>
+    
+  </section>
+  <section class="slide workshop-activity transfer-debrief">
+    <h2>Was hat die Partnerprüfung verändert?</h2>
+    <div class="concept-lead">Zwei Gruppen stellen ihren Entwurf vor.</div>
+    <div class="task-grid activity-grid">
+      <div class="task-card activity-card"><div class="task-n">01</div><strong>Technischer Beitrag</strong><div>Was leistet die Technik, und warum genügt keine einfachere Lösung?</div></div>
+      <div class="task-card activity-card"><div class="task-n">02</div><strong>Kritischster Übergang</strong><div>Wer prüft dort, und was passiert bei einem Fehler?</div></div>
+      <div class="task-card activity-card"><div class="task-n">03</div><strong>Wichtigste Änderung</strong><div>Welcher kritische Fall aus der Prüfung hat euren Entwurf verbessert?</div></div>
+    </div>
+    
+  </section>
 
-  <section class="slide closing-reflection-slide" data-part="Mensch und KI"><h2>Mein nächster Schritt</h2><div class="closing-reflection-grid"><div><span>Ein Anwendungsfall,</span><strong>den ich prüfen möchte</strong></div><div><span>Eine Aufgabe,</span><strong>die ich nicht vorschnell automatisiere</strong></div><div><span>Eine Prüfroutine,</span><strong>die ich künftig nutze</strong></div></div><div class="closing-reflection-time">2 Minuten für eine persönliche Notiz</div></section>
+  <section class="slide closing-questions-slide"><h2>Fünf Fragen für den Berufsalltag</h2><div class="figure" id="fig-closing-questions"></div></section>
 
-  <section class="slide closing-hero" data-part="Mensch und KI"><img class="photo" src="img/entscheidung-lebensmittelproduktion.jpg" alt="Qualitätsverantwortliche Person vor einer Entscheidung in der Lebensmittelproduktion"><div class="closing-hero-shade" aria-hidden="true"></div><div class="closing-hero-text">Gute Zusammenarbeit mit KI beginnt damit, <span>die Entscheidung und ihre Verantwortung</span> zu verstehen.</div><div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div></section>
+  <section class="slide closing-reflection-slide"><h2>Mein nächster Schritt</h2><div class="closing-reflection-grid"><div><span>Ein Anwendungsfall,</span><strong>den ich prüfen möchte</strong></div><div><span>Eine Aufgabe,</span><strong>die ich nicht vorschnell automatisiere</strong></div><div><span>Eine Prüfroutine,</span><strong>die ich künftig nutze</strong></div></div></section>
+
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · zweite Runde</h2><div class="content center"><div class="statement">Welcher Begriff im Umfeld von KI ist für euch jetzt noch am unklarsten?</div></div></section>
+
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · zweite Runde</h2><div class="content center"><div class="statement">KI im Berufsalltag ist für mich …</div></div></section>
+
+  <section class="slide pinboard-slide"><h2><!-- Bootstrap Icons "pin-angle" 1.11.3 (MIT, (c) The Bootstrap Authors) --><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/></svg>Pinnwand · Kartenwand</h2><div class="content center"><div class="statement">Welche eurer Fragen sind beantwortet, welche noch offen?</div></div></section>
+
+  <section class="slide closing-hero"><img class="photo" src="img/entscheidung-lebensmittelproduktion.jpg" alt="Qualitätsverantwortliche Person vor einer Entscheidung in der Lebensmittelproduktion"><div class="closing-hero-shade" aria-hidden="true"></div><div class="closing-hero-text">Gute Zusammenarbeit mit KI beginnt damit, <span>die Entscheidung und ihre Verantwortung</span> zu verstehen.</div><div class="footnote">image: ai-generated (gpt-image-2.5-flare)</div></section>
 
 </div>
-<script src="draw.js?v=20260930-03"></script>
-<script src="deck.js?v=20260930-03"></script>
-<script src="stagekit.js?v=20260930-03"></script>
+<script src="draw.js?v=20261014-02"></script>
+<script src="deck.js?v=20261014-02"></script>
+<script src="stagekit.js?v=20261014-02"></script>
 </body>
 </html>
+
+
 
 
 

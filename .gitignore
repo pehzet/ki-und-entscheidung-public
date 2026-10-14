@@ -1,0 +1,27 @@
+# Nur die erzeugte Website veröffentlichen.
+*
+!/.gitignore
+!/.nojekyll
+!/.site-manifest.json
+!/CNAME
+!/README.md
+!/fonts/
+!/img/
+!/deck.css
+!/deck.js
+!/draw.js
+!/fonts/RobotoMono-Regular.woff2
+!/img/agenten-nachrichten.jpg
+!/img/cognitive-bias-codex-1920.png
+!/img/entscheidung-lebensmittelproduktion.jpg
+!/img/kueche-harness.jpg
+!/img/manny-molk.jpg
+!/img/praesentation-qr.svg
+!/img/transfer-challenge.jpg
+!/img/was-steckt-dahinter.jpg
+!/index.html
+!/ki-und-entscheidung.html
+!/ki-und-entscheidung.pdf
+!/stagekit.css
+!/stagekit.js
+!/theme.css

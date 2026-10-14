@@ -376,7 +376,7 @@
   position: absolute;
   left: var(--margin);
   right: var(--margin);
-  top: 310px;
+  top: 390px;
   height: 390px;
   display: grid;
   grid-template-columns: 420px 1fr;
@@ -408,18 +408,6 @@
   justify-content: center;
   font-size: var(--small);
   border-color: var(--yellow);
-}
-.ai-map-agent {
-  position: absolute;
-  left: var(--margin);
-  right: var(--margin);
-  bottom: 175px;
-  padding: 24px 34px;
-  border-top: 2px solid var(--gray-dark);
-  border-bottom: 2px solid var(--gray-dark);
-  color: var(--gray-light);
-  font-size: var(--small);
-  text-align: center;
 }
 .ai-questions-slide .figure { top: 190px; bottom: 155px; }
 .rules-slide .figure, .ml-slide .figure, .generative-slide .figure { top: 300px; bottom: 195px; }
@@ -635,8 +623,8 @@
   position: absolute;
   left: var(--margin);
   right: var(--margin);
-  top: 320px;
-  height: 340px;
+  top: 360px;
+  height: 380px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
@@ -707,6 +695,33 @@
 .llm-takeaway { position: absolute; left: 200px; right: 200px; top: 250px; text-align: center; font-size: var(--normal); line-height: 1.34; }
 .llm-takeaway span { color: var(--blue); }
 
+/* Decision Models: neue Spezialisierung nach dem LLM-Block. */
+.decision-newness { position: absolute; right: var(--margin); top: 66px; color: var(--yellow); font-size: var(--tiny); letter-spacing: 0.04em; }
+.decision-headline { position: absolute; left: var(--margin); right: var(--margin); top: 180px; font-size: var(--normal); line-height: 1.18; }
+.decision-compare { position: absolute; left: var(--margin); right: var(--margin); top: 330px; height: 480px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 55px; }
+.decision-compare-card { border: 2px solid var(--gray-dark); border-radius: 10px; padding: 34px 42px; display: flex; flex-direction: column; }
+.decision-specialized { border-color: var(--blue); }
+.decision-card-label { color: var(--blue); font-size: var(--small); }
+.decision-card-title { margin-top: 22px; font-size: var(--normal); }
+.decision-text-example { margin-top: 42px; font-size: var(--small); line-height: 1.28; color: var(--white); }
+.decision-card-detail { margin-top: auto; font-size: var(--small); line-height: 1.2; color: var(--gray-light); }
+.decision-prob-row { display: grid; grid-template-columns: 1fr auto; gap: 4px 20px; align-items: center; margin-top: 22px; font-size: var(--small); }
+.decision-prob-row strong { font-size: var(--normal); font-weight: normal; }
+.decision-prob-bar { grid-column: 1 / 3; height: 14px; background: var(--gray-dark); border-radius: 7px; overflow: hidden; }
+.decision-prob-bar i { display: block; height: 100%; background: var(--blue); }
+.decision-prob-row:nth-of-type(4) .decision-prob-bar i { background: var(--gray-light); }
+.decision-caption { position: absolute; left: var(--margin); right: var(--margin); top: 860px; color: var(--yellow); font-size: var(--small); }
+.decision-model-intro-slide .footnote a { text-decoration: underline; text-underline-offset: 4px; }
+.decision-flow { position: absolute; left: var(--margin); right: var(--margin); top: 320px; height: 430px; display: grid; grid-template-columns: minmax(0, 1fr) 70px minmax(0, 1fr) 70px minmax(0, 1fr); align-items: center; gap: 14px; }
+.decision-flow-card { height: 100%; border: 2px solid var(--gray-light); border-radius: 10px; padding: 34px; display: flex; flex-direction: column; }
+.decision-flow-model { border-color: var(--blue); }
+.decision-flow-action { border-color: var(--yellow); }
+.decision-flow-arrow { color: var(--gray); font-size: var(--normal); text-align: center; }
+.decision-flow-title { margin-top: 36px; font-size: var(--normal); line-height: 1.1; }
+.decision-flow-body { margin-top: auto; font-size: var(--small); line-height: 1.22; color: var(--gray-light); }
+.decision-flow-value { margin-top: 30px; font-size: var(--large); color: var(--yellow); }
+.decision-rule { position: absolute; left: var(--margin); right: var(--margin); top: 820px; font-size: var(--small); color: var(--yellow); line-height: 1.22; }
+
 /* Teil 10: agentische Systeme. */
 .agent-flow-slide .figure, .agent-structure-slide .figure, .agent-system-slide .figure,
 .agent-error-slide .figure, .agent-fit-slide .figure, .agent-debrief-slide .figure {
@@ -720,6 +735,7 @@
 .agent-compare-table td:first-child { color: var(--white); font-size: var(--normal); width: 24%; }
 .agent-compare-table td:nth-child(2) { width: 32%; }
 .agent-compare-table td:last-child { color: var(--gray-light); }
+.agent-system-slide .footnote a, .agent-autonomy-risk-slide .footnote a { text-decoration: underline; text-underline-offset: 4px; }
 .rights-grid, .autonomy-grid { position: absolute; left: var(--margin); right: var(--margin); top: 295px; height: 425px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; }
 .rights-card, .autonomy-card { border: 2px solid var(--gray-light); border-radius: 10px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; font-size: var(--small); line-height: 1.22; }
 .rights-card span, .autonomy-card span { color: var(--blue); font-size: var(--small); }
@@ -727,6 +743,12 @@
 .rights-card div { color: var(--gray-light); }
 .autonomy-card div { font-size: var(--normal); }
 .autonomy-card:last-child { border-color: var(--blue); }
+.agent-risk-grid { position: absolute; left: var(--margin); right: var(--margin); top: 320px; height: 430px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+.agent-risk-card { border: 2px solid var(--red); border-radius: 10px; padding: 32px; display: flex; flex-direction: column; }
+.agent-risk-card span { color: var(--red); font-size: var(--small); }
+.agent-risk-card strong { margin-top: 34px; font-size: var(--normal); line-height: 1.12; font-weight: normal; }
+.agent-risk-card p { margin: auto 0 0; font-size: var(--small); line-height: 1.2; color: var(--gray-light); }
+.agent-risk-takeaway { position: absolute; left: var(--margin); right: var(--margin); top: 815px; text-align: center; font-size: var(--small); color: var(--yellow); }
 .autonomy-compare { position: absolute; left: 220px; right: 220px; top: 295px; height: 460px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 60px; }
 .autonomy-variant { padding: 45px; border: 2px solid var(--gray-light); border-radius: 10px; display: flex; flex-direction: column; justify-content: space-between; font-size: var(--small); line-height: 1.28; }
 .autonomy-variant span { color: var(--gray); }
@@ -797,15 +819,11 @@
 .human-reading-grid .reading-column { gap: 22px; }
 
 /* Der Arbeitsauftrag liegt vollständig auf den Druckseiten. */
-.slide.transfer-title .content { left: 0; right: 0; align-items: center; text-align: center; }
-.slide.transfer-title .part-text { font-size: var(--large); }
 .closing-questions-slide .figure { top: 200px; bottom: 165px; }
 .closing-reflection-grid { position: absolute; left: 150px; right: 150px; top: 270px; bottom: 265px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .closing-reflection-grid > div { border: 2px solid var(--gray-light); border-radius: 10px; padding: 30px; display: flex; flex-direction: column; }
-.closing-reflection-grid > div:nth-child(3) { border-color: var(--blue); }
 .closing-reflection-grid span { font-size: var(--small); color: var(--gray); }
 .closing-reflection-grid strong { font-size: var(--small); font-weight: normal; line-height: 1.25; margin-top: 22px; }
-.closing-reflection-time { position: absolute; right: 170px; bottom: 160px; font-size: var(--small); color: var(--yellow); }
 .closing-hero { padding: 0; }
 .closing-hero .photo { width: 100%; object-fit: cover; }
 .closing-hero-shade { position: absolute; inset: 0; background: linear-gradient(to right, var(--bg) 0%, var(--bg) 33%, rgba(27,21,18,0.72) 66%, rgba(27,21,18,0.18) 100%); }
@@ -813,3 +831,88 @@
 .closing-hero-text span { color: var(--yellow); }
 .closing-hero .footnote { z-index: 2; }
 .closing-hero .location { display: none; }
+
+/* The three workshop activities share the existing theme and size levels. */
+.workshop-activity .activity-grid { top: 260px; bottom: 265px; }
+.workshop-activity .activity-card { justify-content: flex-start; gap: 30px; }
+.workshop-activity .activity-card strong { font-size: var(--normal); line-height: 1.18; font-weight: 400; }
+.workshop-activity .activity-card > div:last-child { line-height: 1.32; }
+.activity-timing { position: absolute; left: var(--margin); right: var(--margin); bottom: 185px; text-align: center; font-size: var(--small); color: var(--yellow); }
+.activity-reflection-grid { position: absolute; left: var(--margin); right: var(--margin); top: 260px; bottom: 240px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 50px; }
+.activity-reflection-card { border: 2px solid var(--gray-light); border-radius: 10px; padding: 50px; display: flex; flex-direction: column; justify-content: center; gap: 35px; }
+.activity-reflection-card strong { font-size: var(--normal); line-height: 1.25; font-weight: 400; }
+.activity-reflection-card p { margin: 0; color: var(--gray-light); font-size: var(--small); line-height: 1.32; }
+
+/* --- Umbau: Pinnwand, Kennenlernen, Fotofolien, Harness, Risiken, Schwellen -------- */
+/* Pinnwand: Frage groß in der Mitte, Stecknadel dezent vor der kleinen Überschrift. */
+.pinboard-slide h2 .icon { width: 1em; height: 1em; vertical-align: -0.12em; margin-right: 16px; color: var(--gray); }
+.pinboard-slide .statement { max-width: 1500px; }
+.meet-grid { top: 330px; bottom: 260px; }
+.meet-grid .usage-label { font-family: var(--mono); }
+
+/* Fotofolien mit Text links: Foto über die ganze Folie, Verlauf aus dem Hintergrund. */
+.photo-hero { padding: 0; }
+.photo-hero .photo { width: 100%; object-fit: cover; }
+.photo-hero-shade { position: absolute; inset: 0; background: linear-gradient(to right, var(--bg) 0%, var(--bg) 22%, transparent 55%); }
+.photo-hero-text { position: absolute; z-index: 2; left: var(--margin); width: 34%; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; font-size: var(--normal); line-height: 1.25; }
+.photo-hero-text strong { display: block; font-size: var(--large); font-weight: normal; line-height: 1.15; margin-bottom: 40px; }
+.news-slide .photo-hero-text { width: 40%; font-size: var(--large); line-height: 1.15; }
+.photo-hero .footnote { z-index: 2; }
+.kitchen-slide .footnote { left: auto; right: var(--margin); }
+.photo-hero .location { display: none; }
+.kitchen-slide .figure.kitchen-labels { left: 0; right: 0; top: 0; bottom: 0; z-index: 2; }
+
+/* Kleine Architektur oben rechts: welcher Baustein des Harness gerade dran ist. */
+.harness-mini { position: absolute; right: var(--margin); top: 40px; width: 300px; height: 107px; }
+.harness-mini svg { width: 100%; height: 100%; }
+
+/* Wo kann es schiefgehen? Zeichnung oben, Legende in zwei Spalten darunter. */
+.slide.risk-map-slide .figure { top: 130px; bottom: 380px; }
+.risk-legend { position: absolute; left: 260px; right: 260px; top: 730px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 12px 60px; font-size: var(--small); }
+.risk-legend span, .question-list span { display: inline-block; width: 70px; font-family: var(--mono); color: var(--red); }
+
+.slide.trifecta-slide .figure { top: 140px; bottom: 260px; }
+
+.rights-card.danger { border-color: var(--red); }
+.rights-card.danger span { color: var(--red); }
+.cause-grid { position: absolute; left: var(--margin); right: var(--margin); top: 760px; height: 110px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.cause-grid > div { border: 2px dashed var(--gray); border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; font-size: var(--small); color: var(--gray-light); }
+
+.stage-grid { position: absolute; left: var(--margin); right: var(--margin); top: 260px; height: 480px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; }
+.stage-grid > div { border: 2px solid var(--gray-light); border-radius: 10px; padding: 32px 30px; display: flex; flex-direction: column; }
+.stage-grid span { font-family: var(--mono); font-size: var(--small); color: var(--blue); }
+.stage-grid strong { margin-top: 34px; font-size: var(--normal); font-weight: normal; line-height: 1.12; }
+.stage-grid p { margin: auto 0 0; font-size: var(--small); line-height: 1.22; color: var(--gray-light); }
+
+.question-list { position: absolute; left: 260px; right: var(--margin); top: 250px; margin: 0; padding: 0; list-style: none; font-size: var(--normal); line-height: 1.2; }
+.question-list li { margin-bottom: 44px; }
+.question-list span { color: var(--blue); }
+
+.counter-list { position: absolute; left: var(--margin); right: var(--margin); top: 240px; display: grid; gap: 22px; }
+.counter-list > div { display: grid; grid-template-columns: 420px 1fr; align-items: center; border-left: 6px solid var(--green); padding: 18px 30px; font-size: var(--small); line-height: 1.22; }
+.counter-list span { color: var(--gray); }
+
+/* Wer setzt die Schwelle? Skala 0 bis 100 %, Zonen erst im ersten Aufbauschritt. */
+.threshold { position: absolute; left: var(--margin); right: var(--margin); top: 330px; }
+.threshold-bar { position: relative; height: 56px; display: flex; background: var(--gray-dark); border-radius: 8px; }
+.threshold-bar .zone { height: 100%; }
+.threshold-bar .z1 { background: var(--gray); border-radius: 8px 0 0 8px; }
+.threshold-bar .z2 { background: var(--gray-light); }
+.threshold-bar .z3 { background: var(--red); border-radius: 0 8px 8px 0; }
+.threshold-marker { position: absolute; top: -18px; bottom: -18px; width: 4px; margin-left: -2px; background: var(--white); }
+.threshold-marker span { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); padding-bottom: 8px; font-family: var(--mono); font-size: var(--small); white-space: nowrap; }
+.threshold-scale { position: relative; height: 40px; margin-top: 30px; }
+.threshold-scale span { position: absolute; transform: translateX(-50%); font-family: var(--mono); font-size: var(--small); color: var(--gray); white-space: nowrap; }
+.threshold-labels { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; font-size: var(--small); line-height: 1.22; color: var(--gray-light); }
+.threshold-labels > div { border-top: 6px solid var(--gray); padding-top: 18px; }
+.threshold-labels .t2 { border-top-color: var(--gray-light); }
+.threshold-labels .t3 { border-top-color: var(--red); }
+.threshold-labels strong { display: block; font-weight: normal; color: var(--white); margin-bottom: 6px; }
+.decision-threshold-slide .figure.threshold-chain { top: 680px; bottom: 240px; }
+
+/* Transfer-Challenge: vier Felder des A3-Canvas als 2 × 2. */
+.transfer-grid { position: absolute; left: var(--margin); right: var(--margin); top: 260px; bottom: 265px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 30px 38px; }
+.transfer-grid .task-card { justify-content: center; gap: 18px; padding: 26px 38px; }
+.transfer-grid strong { font-size: var(--normal); font-weight: 400; }
+.transfer-grid .task-n { display: inline-block; min-width: 80px; }
+.transfer-grid .task-card > div { padding-left: 80px; color: var(--gray-light); }
