@@ -1125,5 +1125,5 @@ put("fig-transfer-flow", d.svg(1680, 620,
     d.box(20 + i * 335, 150, 290, 180, label, { border: c.light, size: 32 }),
     d.label(165 + i * 335, 0, detail, { size: 32, color: c.gray, anchor: "middle", centerY: 440 })
   ]).flat(),
-  d.label(840, 590, "Weitergabe im Kreis: Gruppe 1 → 2 → 3 → 4 → 5 → 1", { size: 32, color: c.light, anchor: "middle" })
+  d.label(840, 590, "Weitergabe im Kreis an die nächste Gruppe", { size: 32, color: c.light, anchor: "middle" })
 ));
