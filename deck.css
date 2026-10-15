@@ -930,3 +930,20 @@
 .quote-slide .quote-translation { margin-top: 60px; font-size: var(--small); color: var(--gray-light); }
 .quote-slide .quote-source { margin-top: 20px; font-size: var(--small); color: var(--gray); }
 .quote-slide .quote-source a { color: inherit; }
+
+/* Vorstellung: Foto links, rechts Name und eine senkrechte Zeitleiste. Laufende Stationen
+   tragen Gelb (aktuell), abgeschlossene Grau. */
+.about-slide .about-photo { position: absolute; left: var(--margin); top: 220px; width: 560px; height: 560px; object-fit: cover; border-radius: 10px; }
+.about-slide .about-head { position: absolute; left: 780px; right: var(--margin); top: 150px; }
+.about-slide .about-name { font-size: var(--normal); color: var(--white); line-height: 1.15; }
+.about-slide .about-sub { margin-top: 12px; font-size: var(--small); color: var(--gray); }
+.about-slide .about-sub a { color: inherit; }
+.about-slide .about-timeline { position: absolute; left: 780px; right: var(--margin); top: 330px; margin: 0; padding: 0; list-style: none; border-left: 2px solid var(--gray-dark); }
+.about-slide .about-timeline li { position: relative; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 20px; padding: 0 0 34px 40px; }
+.about-slide .about-timeline li:last-child { padding-bottom: 0; }
+.about-slide .about-timeline li::before { content: ""; position: absolute; left: -9px; top: 12px; width: 16px; height: 16px; border-radius: 50%; background: var(--gray); }
+.about-slide .about-timeline li.now::before { background: var(--yellow); }
+.about-slide .about-year { font-size: var(--small); color: var(--gray); line-height: 1.25; }
+.about-slide li.now .about-year { color: var(--yellow); }
+.about-slide .about-timeline strong { display: block; font-size: var(--small); font-weight: normal; color: var(--white); line-height: 1.25; }
+.about-slide .about-detail { display: block; margin-top: 4px; font-size: var(--tiny); color: var(--gray-light); line-height: 1.3; }
