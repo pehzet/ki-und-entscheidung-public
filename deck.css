@@ -802,7 +802,6 @@
 .human-risk-four strong { font-size: var(--normal); font-weight: normal; }
 .human-roles-grid { position: absolute; left: 150px; right: 150px; top: 325px; bottom: 200px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 .human-roles-grid > div { border: 2px solid var(--gray-light); border-radius: 10px; padding: 32px; display: flex; flex-direction: column; }
-.human-roles-grid > div:nth-child(2) { border-color: var(--blue); }
 .human-roles-grid span { font-size: var(--small); color: var(--gray); }
 .human-roles-grid strong { margin-top: 45px; font-size: var(--normal); line-height: 1.14; font-weight: normal; }
 .human-roles-grid p { margin: auto 0 0; font-size: var(--small); line-height: 1.25; color: var(--gray-light); }
@@ -916,3 +915,18 @@
 .transfer-grid strong { font-size: var(--normal); font-weight: 400; }
 .transfer-grid .task-n { display: inline-block; min-width: 80px; }
 .transfer-grid .task-card > div { padding-left: 80px; color: var(--gray-light); }
+
+/* Schlusszitat: links ausgerichtet und senkrecht mittig; die Wendung des Satzes trägt das einzige Blau. */
+.quote-slide { padding: 0; }
+/* Foto um 320 nach rechts versetzt, damit die durchgehende erste Zeile (bis x ≈ 1385) nicht in die Person läuft. */
+.slide.quote-slide img.photo { width: 1920px; height: 1080px; right: -320px; object-fit: cover; }
+.quote-slide .footnote { z-index: 2; }
+.quote-slide .location { display: none; }
+.quote-slide .quote-block { position: absolute; z-index: 2; left: var(--margin); right: var(--margin); top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; }
+.quote-slide .quote-block .icon { width: 80px; height: 80px; color: var(--gray-dark); margin-bottom: 40px; }
+.quote-slide blockquote { margin: 0; font-size: var(--large); line-height: 1.2; color: var(--white); }
+.quote-slide blockquote span { display: block; white-space: nowrap; }
+.quote-slide .quote-turn { color: var(--blue); }
+.quote-slide .quote-translation { margin-top: 60px; font-size: var(--small); color: var(--gray-light); }
+.quote-slide .quote-source { margin-top: 20px; font-size: var(--small); color: var(--gray); }
+.quote-slide .quote-source a { color: inherit; }

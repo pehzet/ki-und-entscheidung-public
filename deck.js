@@ -146,33 +146,6 @@ document.getElementById("fig-certainty").innerHTML = d.svg(1680, 620,
   ]).flat()
 );
 
-// Folie 17: limits surround the decision situation without judging the person.
-document.getElementById("fig-bounded").innerHTML = d.svg(1680, 620,
-  d.line(840, 160, 840, 230, { color: c.gray, width: 4 }),
-  d.line(840, 390, 840, 460, { color: c.gray, width: 4 }),
-  d.line(525, 310, 650, 310, { color: c.gray, width: 4 }),
-  d.line(1030, 310, 1155, 310, { color: c.gray, width: 4 }),
-  d.box(650, 230, 380, 160, "Entscheidung", { border: c.blue, size: 48 }),
-  d.box(625, 0, 430, 160, "Zeit", { border: c.light, size: 48 }),
-  d.box(0, 230, 525, 160, "Information", { border: c.light, size: 48 }),
-  d.box(1155, 230, 525, 160, "Aufmerksamkeit", { border: c.light, size: 48 }),
-  d.box(590, 460, 500, 160, "Rechenkapazität", { border: c.light, size: 48 })
-);
-
-// Folie 18: the third examined option is the first to clear the minimum.
-const satisficingOptions = [
-  ["A", 105, c.gray], ["B", 160, c.gray], ["C", 270, c.yellow], ["…", 0, c.gray]
-];
-document.getElementById("fig-satisficing").innerHTML = d.svg(1680, 600,
-  d.line(90, 285, 1590, 285, { color: c.blue, width: 4, dashed: true }),
-  d.label(1590, 260, "Mindestniveau", { size: 32, color: c.blue, anchor: "end" }),
-  ...satisficingOptions.map(([name, height, color], i) => [
-    height ? `<rect x="${170 + i * 370}" y="${475 - height}" width="190" height="${height}" fill="none" stroke="${color}" stroke-width="5"/>` : "",
-    d.label(265 + i * 370, 540, name, { size: 48, color, anchor: "middle" })
-  ]).flat(),
-  d.label(1005, 105, "Suche endet", { size: 32, color: c.yellow, anchor: "middle" })
-);
-
 // Folie 19: many branches are replaced by one deliberately simple rule.
 document.getElementById("fig-heuristic").innerHTML = d.svg(1680, 620,
   d.line(175, 285, 295, 285, { color: c.gray, width: 4 }),
@@ -222,16 +195,6 @@ document.getElementById("fig-noise").innerHTML = d.svg(1680, 620,
   ...[280, 610, 1110, 1410].map(x => `<circle cx="${x}" cy="480" r="20" fill="${c.white}"/>`),
   d.label(190, 555, "Urteil A", { size: 32, color: c.gray }),
   d.label(1490, 555, "Urteil B", { size: 32, color: c.gray, anchor: "end" })
-);
-
-// Folie 24: visibility can make an event easier to recall than quieter cases.
-document.getElementById("fig-availability").innerHTML = d.svg(1680, 620,
-  d.arrow(510, 315, 620, 315, { color: c.gray, width: 4 }),
-  d.arrow(1060, 315, 1170, 315, { color: c.gray, width: 4 }),
-  d.box(60, 205, 450, 220, "Sichtbarer\nRückruf", { border: c.blue, size: 48 }),
-  d.box(620, 205, 440, 220, "Leicht\nerinnerbar", { border: c.light, size: 48 }),
-  d.box(1170, 205, 450, 220, "Wirkt\nwahrscheinlicher", { border: c.light, size: 48 }),
-  d.label(840, 530, "Sichtbarkeit ist nicht dasselbe wie Häufigkeit.", { size: 32, color: c.gray, anchor: "middle" })
 );
 
 // Folien 26 und 27: identical decision geometry; only the retrospective labels change.
@@ -487,15 +450,6 @@ document.getElementById("fig-options").innerHTML = d.svg(1680, 590,
   d.box(1205, 170, 440, 240, "Bewertung:\nzulässig?\npraktikabel?", { border: c.yellow, size: 32 })
 );
 
-// Folie 64: the important passage sits in the middle of a long document.
-document.getElementById("fig-long-context").innerHTML = d.svg(1680, 570,
-  d.box(120, 35, 1440, 505, "", { border: c.light }),
-  ...Array.from({length: 10}, (_, i) => `<rect x="190" y="85" width="1280" height="27" rx="6" fill="${i === 5 ? c.yellow : c.dark}" transform="translate(0 ${i * 41})"/>`),
-  d.label(840, 70, "Beginn", { size: 32, color: c.gray, anchor: "middle" }),
-  d.label(840, 565, "Ende", { size: 32, color: c.gray, anchor: "middle" }),
-  d.label(1500, 70, "Gelb: relevante Passage", { size: 32, color: c.yellow, anchor: "end" })
-);
-
 document.getElementById("fig-verify").innerHTML = d.svg(1680, 550,
   ...[0, 1, 2].map(i => d.arrow(510, 275, 690, 95 + i * 175, { color: c.gray, width: 3 })),
   ...[0, 1, 2].map(i => d.arrow(1070, 95 + i * 175, 1220, 275, { color: c.gray, width: 3 })),
@@ -518,10 +472,17 @@ document.getElementById("fig-retrieval").innerHTML = d.svg(1680, 540,
   ].map(([v, color], i) => d.box(20 + 330 * i, 170, 270, 190, v, { border: color, size: 32 }))
 );
 
+// Gehirn ohne Hände: Das Modell in der Mitte denkt und formuliert; die vier Hände aus dem
+// Rohstofffall sind gestrichelt und grau, weil das Modell sie allein nicht hat.
+// Kastenbreite 360: längste Zeile „beim Lieferanten“ 16 × 32 × 0,6 = 307 + 2 × 20 Rand = 347.
+// „Sprachmodell“ 12 × 48 × 0,6 = 346 + 40 = 386 < 400. Linien zuerst, die Kästen decken die Enden.
+const hands = [[80, 40, "Bestand im ERP\nnachsehen"], [1240, 40, "Bedarf\nausrechnen"],
+               [80, 380, "Rezeptur\nnachschlagen"], [1240, 380, "beim Lieferanten\nnachfragen"]];
 document.getElementById("fig-tools").innerHTML = d.svg(1680, 580,
-  ...[[260, 85], [1360, 85], [260, 375], [1360, 375]].map(([x, y]) => d.arrow(840, 290, x, y + 82, { color: c.gray, width: 3 })),
-  d.box(640, 195, 400, 190, "LLM im System", { border: c.blue, size: 48 }),
-  ...[[260, 85, "Rechner"], [1360, 85, "Dokumenten-\nsuche"], [260, 375, "Datenbank"], [1360, 375, "betriebliche\nAnwendung"]].map(([x, y, label]) => d.box(x - 145, y, 290, 165, label, { border: c.light, size: 32 }))
+  ...hands.map(([x, y]) => d.line(840, 290, x + 180, y + 80, { color: c.dark, width: 3, dashed: true })),
+  d.box(640, 190, 400, 170, "Sprachmodell", { border: c.blue, size: 48 }),
+  d.label(840, 0, "denkt und formuliert", { size: 32, color: c.gray, anchor: "middle", centerY: 405 }),
+  ...hands.map(([x, y, label]) => d.box(x, y, 360, 160, label, { border: c.gray, dashed: true, size: 32, color: c.gray }))
 );
 
 document.getElementById("fig-tool-result").innerHTML = d.svg(1680, 540,
@@ -565,16 +526,6 @@ document.getElementById("fig-agent-workflow").innerHTML = d.svg(1680, 580,
   ...agentWorkflowSteps.map((label, i) => d.box(20 + i * 420, 195, 360, 190, label, { border: i === 0 ? c.blue : i === 3 ? c.yellow : c.light, size: 32 }))
 );
 
-document.getElementById("fig-agent-dynamic").innerHTML = d.svg(1680, 580,
-  d.arrow(390, 290, 610, 290, { color: c.gray, width: 4 }),
-  d.arrow(1010, 290, 1210, 125, { color: c.yellow, width: 4 }),
-  d.arrow(1010, 290, 1210, 455, { color: c.gray, width: 4 }),
-  d.box(25, 195, 365, 190, "Ziel", { border: c.blue, size: 48 }),
-  d.box(610, 180, 400, 220, "Zwischenergebnis\nbeobachten", { border: c.light, size: 32 }),
-  d.box(1210, 45, 435, 160, "weiter prüfen", { border: c.yellow, size: 32 }),
-  d.box(1210, 375, 435, 160, "eskalieren", { border: c.light, size: 32 })
-);
-
 // Reused harness architecture in the overview and case debrief.
 function agentArchitecture(risk) {
   const modules = [
@@ -608,16 +559,6 @@ document.getElementById("fig-agent-goal").innerHTML = d.svg(1680, 590,
   d.box(1000, 395, 610, 170, "nächsten Schritt wählen", { border: c.yellow, size: 32 })
 );
 
-document.getElementById("fig-agent-state").innerHTML = d.svg(1680, 590,
-  d.arrow(450, 130, 650, 285, { color: c.gray, width: 3 }),
-  d.arrow(450, 460, 650, 285, { color: c.gray, width: 3 }),
-  d.arrow(1080, 285, 1230, 285, { color: c.yellow, width: 4 }),
-  d.box(30, 45, 420, 170, "ERP geprüft", { border: c.light, size: 32 }),
-  d.box(30, 375, 420, 170, "Lieferant angefragt", { border: c.light, size: 32 }),
-  d.box(650, 180, 430, 210, "aktueller Zustand", { border: c.blue, size: 48 }),
-  d.box(1230, 180, 415, 210, "nächster Schritt", { border: c.yellow, size: 32 })
-);
-
 document.getElementById("fig-agent-tools").innerHTML = d.svg(1680, 600,
   d.arrow(430, 280, 610, 280, { color: c.gray, width: 4 }),
   d.arrow(1000, 280, 1200, 140, { color: c.gray, width: 4 }),
@@ -635,7 +576,7 @@ document.getElementById("fig-agent-tools").innerHTML = d.svg(1680, 600,
 document.getElementById("fig-agent-control").innerHTML = d.svg(1680, 610,
   ...[[1130, 75], [1130, 215], [1130, 355], [1130, 495]].map(([x, y]) => d.arrow(935, 305, x, y + 55, { color: c.gray, width: 3 })),
   d.box(470, 195, 465, 220, "Zustand prüfen", { border: c.blue, size: 48 }),
-  ...[[1130, 75, "weiter"], [1130, 215, "fertig"], [1130, 355, "Mensch übernehmen"], [1130, 495, "abbrechen"]].map(([x, y, label], i) => d.box(x, y, 490, 110, label, { border: i === 2 ? c.yellow : i === 3 ? c.red : c.light, size: 32 }))
+  ...[[1130, 75, "weiter"], [1130, 215, "fertig"], [1130, 355, "an Mensch eskalieren"], [1130, 495, "abbrechen"]].map(([x, y, label], i) => d.box(x, y, 490, 110, label, { border: i === 2 ? c.yellow : i === 3 ? c.red : c.light, size: 32 }))
 );
 
 document.getElementById("fig-agent-loop").innerHTML = d.svg(1680, 610,
@@ -654,12 +595,6 @@ document.getElementById("fig-agent-gate").innerHTML = d.svg(1680, 470,
   d.box(625, 120, 405, 230, "Harness:\nFreigabe prüfen", { border: c.yellow, size: 32 }),
   d.box(1180, 140, 470, 190, "ERP:\nBestellung auslösen", { border: c.light, size: 32 }),
   d.label(1105, 88, "nur nach Freigabe", { size: 20, color: c.yellow, anchor: "middle" })
-);
-
-document.getElementById("fig-agent-error").innerHTML = d.svg(1680, 590,
-  ...[390, 810, 1230].map(x => d.arrow(x, 290, x + 35, 290, { color: c.gray, width: 4 })),
-  ...["falsche\nBestandsangabe", "falsches\nZwischenziel", "unpassendes\nTool", "Folgeaktion"].map((v, i) => d.box(20 + i * 420, 185, 370, 210, v, { border: i === 0 ? c.red : c.light, size: 32 })),
-  d.label(840, 500, "Hier prüfen: Stimmen ERP und Lieferdaten überein?", { size: 32, color: c.yellow, anchor: "middle" })
 );
 
 document.getElementById("fig-agent-fit").innerHTML = d.svg(1680, 590,
@@ -688,7 +623,7 @@ document.getElementById("fig-human-divider").innerHTML = d.svg(760, 610,
   d.box(195, 400, 370, 140, "Entscheidung", { border: c.yellow, size: 48 })
 );
 document.getElementById("fig-human-chain-all").innerHTML = decisionChain(-1,
-  [d.label(940, 455, "Wer übernimmt welche Funktion – und unter welchen Bedingungen?", { size: 32, color: c.gray, anchor: "middle" })]);
+  [d.label(940, 455, "Wer übernimmt welche Funktion, und unter welchen Bedingungen?", { size: 32, color: c.gray, anchor: "middle" })]);
 document.getElementById("fig-human-chain-info").innerHTML = decisionChain(0,
   [d.arrow(680, 395, 895, 395, { color: c.gray, width: 3 }), d.arrow(1125, 395, 1340, 395, { color: c.gray, width: 3 }),
    d.box(220, 325, 460, 140, "Dokumente + Daten", { border: c.light, size: 32 }),
@@ -788,13 +723,6 @@ document.getElementById("fig-human-explain").innerHTML = d.svg(1680, 580,
   d.box(960, 155, 600, 260, "Prüfung an\nDaten und Quellen", { border: c.yellow, size: 32 }),
   d.label(840, 505, "Verstehen → noch nicht: bewiesen", { size: 32, color: c.gray, anchor: "middle" })
 );
-document.getElementById("fig-human-false-explain").innerHTML = d.svg(1680, 580,
-  d.arrow(690, 285, 850, 285, { color: c.gray, width: 4 }),
-  d.arrow(1180, 285, 1310, 285, { color: c.yellow, width: 4 }),
-  d.box(40, 155, 650, 260, "falsche Empfehlung\n+ plausible Erklärung", { border: c.red, size: 32 }),
-  d.box(850, 155, 330, 260, "prüfen", { border: c.yellow, size: 48 }),
-  d.box(1310, 155, 330, 260, "Fakten", { border: c.blue, size: 48 })
-);
 document.getElementById("fig-human-first").innerHTML = d.svg(1680, 580,
   ...[360, 780, 1200].map(x => d.arrow(x, 290, x + 60, 290, { color: c.gray, width: 4 })),
   ...["eigenes\nErsturteil", "KI-Vorschlag", "Unterschiede\nprüfen", "Entscheidung"].map((label, i) =>
@@ -893,24 +821,56 @@ if (document.getElementById("fig-human-position")) document.getElementById("fig-
   d.label(840, 90, "Welche Bedingung bestimmt eure Position?", { size: 32, color: c.gray, anchor: "middle" })
 );
 
-document.getElementById("fig-closing-questions").innerHTML = d.svg(1680, 715,
-  ...[
-    "Was ist hier eigentlich die Entscheidung?",
-    "Wobei kann KI konkret helfen?",
-    "Wo kann das System irren oder scheitern?",
-    "Was müssen Menschen beurteilen oder verantworten?",
-    "Welche Kontrolle liegt vor der realen Handlung?"
-  ].flatMap((question, i) => [
-    `<rect x="80" y="${20 + i * 132}" width="1520" height="106" rx="9" fill="none" stroke="${c.gray}" stroke-width="2"/>`,
-    d.label(125, 88 + i * 132, String(i + 1).padStart(2, "0"), { size: 32, color: c.blue }),
-    d.label(245, 88 + i * 132, question, { size: 32, color: c.light })
-  ])
-);
-
-
 // --- Umbau: fünf Blöcke, Küche, Harness, Risiken, Decision Models -------------------
 // Schreibt nur in Elemente, die es gibt; so bleibt deck.js robust, wenn Folien wegfallen.
 const put = (id, svg) => { const e = document.getElementById(id); if (e) e.innerHTML = svg; };
+
+// Ein agentisches System wählt nächste Schritte: gleiche Bildsprache wie Chatbot und Workflow,
+// aber ohne festen Weg. Links das Ziel, in der Mitte ein ungeordneter Vorrat möglicher Schritte
+// (gestrichelter Rahmen), rechts zwei Ausgänge. Je Aufbauschritt kommt ein gelber, nummerierter
+// Abschnitt des Weges hinzu; darunter steht, was das Modell gerade beobachtet hat.
+// Kästen im Vorrat 320 breit: „Reservierungen“ 14 × 32 × 0,6 = 269 + 2 × 20 Rand = 309.
+// Ausgänge 330 breit bis x 1670, Ziel ab x 10: Rahmen bleiben mehr als eine halbe Strichbreite innen.
+// Linien zuerst, Kästen danach, Nummern zuletzt; Geometrie in allen Schritten gleich.
+const agentPool = [
+  [520, 30, "Bestand\nabfragen"], [900, 30, "Reservierungen\nprüfen"],
+  [520, 180, "Bedarf\nrechnen"], [900, 180, "Lieferant\nanfragen"],
+  [520, 330, "Dokumente\nsuchen"], [900, 330, "Bestellung\nvorschlagen"]
+];
+const agentExits = [[1340, 60, "Ergebnis\nvorlegen"], [1340, 290, "an Mensch\neskalieren"]];
+// Weg je Schritt: Pfeil, besuchter Kasten (Index im Vorrat oder "esc"), Ecke für die Nummer.
+const agentRoute = [
+  { from: [390, 240], to: [520, 85], box: 0, corner: [520, 30] },
+  { from: [840, 85], to: [900, 85], box: 1, corner: [900, 30] },
+  { from: [1060, 140], to: [1060, 180], box: 3, corner: [900, 180] },
+  { from: [1220, 235], to: [1340, 355], box: "esc", corner: [1340, 290] }
+];
+const agentObservations = [
+  "Welcher Schritt zuerst kommt, ist noch offen.",
+  "Der Bestand laut ERP reicht nur knapp.",
+  "Ein Teil ist schon für andere Aufträge reserviert.",
+  "Der Lieferant liefert erst übermorgen.",
+  "Der Engpass bleibt, ein Mensch muss entscheiden."
+];
+function agentPath(step) {
+  const done = agentRoute.slice(0, step);
+  const visited = done.map(r => r.box);
+  return d.svg(1680, 580,
+    ...done.map(r => d.arrow(r.from[0], r.from[1], r.to[0], r.to[1], { color: c.yellow, width: 4 })),
+    `<rect x="490" y="4" width="760" height="466" rx="16" fill="none" stroke="${c.dark}" stroke-width="3" stroke-dasharray="12 10"/>`,
+    d.box(10, 150, 380, 180, "Ziel:\nRohstoff für\nmorgen klären", { border: c.blue, size: 32 }),
+    ...agentPool.map(([x, y, label], i) => d.box(x, y, 320, 110, label,
+      { border: visited.includes(i) ? c.yellow : c.gray, size: 32, color: visited.includes(i) ? c.white : c.gray })),
+    ...agentExits.map(([x, y, label], i) => d.box(x, y, 330, 130, label,
+      { border: i === 1 && visited.includes("esc") ? c.yellow : c.light, size: 32 })),
+    ...done.map((r, i) => `<circle cx="${r.corner[0]}" cy="${r.corner[1]}" r="24" fill="${c.yellow}"/>` +
+      d.label(r.corner[0], 0, String(i + 1), { size: 32, color: c.bg, anchor: "middle", centerY: r.corner[1] })),
+    d.label(840, 0, agentObservations[step], { size: 32, color: step ? c.yellow : c.gray, anchor: "middle", centerY: 540 })
+  );
+}
+put("fig-agent-dynamic", agentPath(0));
+window.agentPathStep = (slide, step) => put("fig-agent-dynamic", agentPath(step));
+
 
 // Unser Weg durch den Tag: fünf Blöcke, darunter die drei Arbeitsphasen.
 // Kästen 290 breit, Abstand 45 (x = 20 + i · 335); längste Zeile „Sprachmodelle“
@@ -1083,22 +1043,6 @@ function trifecta(step) {
 }
 put("fig-trifecta", trifecta(0));
 window.trifectaStep = (slide, step) => put("fig-trifecta", trifecta(step));
-
-// Erweiterungen von Dritten laufen mit den Rechten des Agenten.
-// „geprüfte Erweiterung“ 20 × 19,2 = 384 + 40 Rand < 440.
-put("fig-plugins", d.svg(1680, 560,
-  ...[95, 255, 450].map((y) => d.line(640, y, 740, y, { color: c.gray, width: 3 })),
-  d.arrow(1180, 450, 1330, 350, { color: c.red, width: 4 }),
-  d.arrow(1180, 450, 1330, 490, { color: c.red, width: 4 }),
-  `<rect x="4" y="20" width="636" height="520" rx="16" fill="none" stroke="${c.yellow}" stroke-width="3"/>`,
-  d.label(34, 80, "Harness", { size: 32, color: c.yellow }),
-  d.box(170, 220, 300, 120, "Modell", { border: c.blue, size: 48 }),
-  d.box(740, 40, 440, 110, "eigenes Werkzeug", { border: c.light, size: 32 }),
-  d.box(740, 200, 440, 110, "geprüfte Erweiterung", { border: c.light, size: 32 }),
-  d.box(740, 380, 440, 140, "Erweiterung aus\noffenem Marktplatz", { border: c.red, size: 32 }),
-  d.box(1330, 300, 346, 100, "Zugangsdaten", { border: c.light, size: 32 }),
-  d.box(1330, 440, 346, 100, "Dateien", { border: c.light, size: 32 })
-));
 
 // Wer setzt die Schwelle? Darunter die Unterscheidung aus Block 1.
 // „zuständige Person“ 17 × 19,2 = 326 + 40 Rand < 400.
