@@ -626,7 +626,7 @@
       case "Home": showFrame(0); break;
       case "End": showFrame(frames.length - 1); break;
       case "f": case "F": if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen(); break;
-      case "n": case "N": openNotes(); break;
+      
       case "p": case "P": location.search = "?print"; break;
       case "l": case "L": live.askKey(); break;           // live polls: the server's admin key
       case "c": case "C": live.newSession(); break;       // live polls: a new session code
