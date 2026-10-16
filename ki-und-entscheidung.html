@@ -6,7 +6,7 @@
   <title>KI und Entscheidung</title>
   <link rel="stylesheet" href="theme.css?v=20261014-04">
   <link rel="stylesheet" href="stagekit.css?v=20261014-04">
-  <link rel="stylesheet" href="deck.css?v=20261015-06">
+  <link rel="stylesheet" href="deck.css?v=20261016-02">
 </head>
 <body>
 <div class="deck" data-title="KI und Entscheidung"
@@ -487,6 +487,18 @@
     
   </section>
 
+  <section class="slide verify-train-slide" data-on-show="verifyTrainStep" data-on-step="verifyTrainStep">
+    <h2>Was sich prüfen lässt, lässt sich trainieren</h2>
+    <div class="vt-quote">
+      <blockquote><span>„Klassische Software automatisiert, was man spezifizieren kann.</span><span>KI automatisiert, was man <em>verifizieren</em> kann.“</span></blockquote>
+      <div class="vt-source">angelehnt an Andrej Karpathy, 2025 · <a href="https://x.com/karpathy/status/1990116666194456651" target="_blank" rel="noopener noreferrer">Beitrag auf X</a></div>
+    </div>
+    <div class="figure" id="fig-verify-train"></div>
+    <span data-step="1"></span>
+    <div class="concept-caption" data-step="2">Wo ein Ergebnis automatisch geprüft werden kann, lernt ein Modell aus sehr vielen Versuchen.</div>
+    
+  </section>
+
   <section class="slide assistant-slide">
     <h2>Vom Basismodell zum Assistenten</h2>
     <div class="figure" id="fig-assistant"></div>
@@ -634,6 +646,8 @@
   <section class="slide headline-check-slide"><h2>Eine Meldung einordnen</h2><ol class="question-list"><li data-step="1"><span>1</span>Im Betrieb, im Test oder befürchtet?</li><li data-step="2"><span>2</span>Welche Rechte hatte der Agent?</li><li data-step="3"><span>3</span>Woher kam die Eingabe, die ihn auf Abwege brachte?</li><li data-step="4"><span>4</span>Gab es einen Prüfpunkt vor der Wirkung?</li><li data-step="5"><span>5</span>Ließ sich die Wirkung zurücknehmen?</li></ol></section>
 
   <section class="slide counter-slide has-punch"><h2>Was dagegen hilft</h2><div class="counter-list"><div><span>Rechte und Freigaben</span>nur nötige Rechte, Freigabe vor folgenreichen Aktionen</div><div><span>Kontext</span>fremde Inhalte nie als Anweisung behandeln</div><div><span>Tools</span>Erweiterungen prüfen sowie Test und Betrieb trennen</div><div><span>Steuerung</span>Stopp bei Widersprüchen, Grenzen für Schrittzahl und Betrag</div><div><span>Protokoll</span>jede Aktion nachvollziehbar festhalten und beobachten</div></div><div class="punch">Fast alles, was einen Agenten sicherer macht, steckt im Harness und nicht im Modell.</div></section>
+
+  <section class="slide verify-asym-slide" data-on-show="verifyAsymStep" data-on-step="verifyAsymStep"><h2>Erzeugen und Prüfen sind unterschiedlich schwer</h2><div class="figure" id="fig-verify-asym"></div><span data-step="1"></span><div class="concept-caption" data-step="2">KI lässt sich besonders gut dort einsetzen, wo Prüfen leichter ist als Erzeugen.</div></section>
 
   <section class="slide agent-fit-slide has-punch"><h2>Nicht jedes Problem braucht einen Agenten</h2><div class="concept-lead">Ein fester Workflow passt gut, wenn Schritte und Ausnahmen vorhersehbar sind.</div><div class="figure" id="fig-agent-fit"></div><div class="concept-caption">Dynamische Planung hilft bei offenen, wechselnden Schritten.</div><div class="punch">Die sicherste Befugnis ist die, die ein System gar nicht erst bekommt.</div></section>
 
@@ -823,7 +837,7 @@
 
 </div>
 <script src="draw.js?v=20261014-04"></script>
-<script src="deck.js?v=20261015-04"></script>
+<script src="deck.js?v=20261016-01"></script>
 <script src="stagekit.js?v=20261014-04"></script>
 </body>
 </html>

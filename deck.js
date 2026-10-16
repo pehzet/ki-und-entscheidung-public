@@ -420,10 +420,10 @@ document.getElementById("fig-preference").innerHTML = d.svg(1680, 570,
 );
 
 // Folie 55: the broad training sequence closes the introductory LLM block.
-const assistantStages = ["Pretraining", "Instruction\nTuning", "Präferenz-\nFeedback", "Assistent"];
+const assistantStages = ["Pretraining", "Instruction\nTuning", "Präferenz-\nFeedback", "Prüfbare\nAufgaben", "Assistent"];
 document.getElementById("fig-assistant").innerHTML = d.svg(1680, 530,
-  ...[0, 1, 2].map(i => d.arrow(380 + i * 420, 265, 450 + i * 420, 265, { color: c.gray, width: 4 })),
-  ...assistantStages.map((label, i) => d.box(30 + i * 420, 170, 350, 190, label, { border: i === 3 ? c.yellow : i === 0 ? c.blue : c.light, size: 32 }))
+  ...[0, 1, 2, 3].map(i => d.arrow(290 + i * 345, 265, 345 + i * 345, 265, { color: c.gray, width: 4 })),
+  ...assistantStages.map((label, i) => d.box(i * 345, 170, 290, 190, label, { border: i === 4 ? c.yellow : i === 0 ? c.blue : c.light, size: 32 }))
 );
 
 // Folien 58–60: three distinct useful tasks; source and review stay visible.
@@ -1043,6 +1043,54 @@ function trifecta(step) {
 }
 put("fig-trifecta", trifecta(0));
 window.trifectaStep = (slide, step) => put("fig-trifecta", trifecta(step));
+
+// Prüfbarkeit, Block 2: Versuch und automatische Prüfung (Stufe 1), dann wo das schnell wirkt (Stufe 2).
+function verifyTrain(step) {
+  return d.svg(1680, 360,
+    step >= 1 ? [
+      d.arrow(130, 140, 130, 220, { color: c.gray, width: 4 }),
+      d.arrow(290, 220, 290, 140, { color: c.yellow, width: 4 }),
+      d.box(0, 10, 420, 130, "Modell\nlöst Aufgabe", { border: c.blue, size: 32 }),
+      d.box(0, 220, 420, 130, "Prüfer meldet\nrichtig oder falsch", { border: c.light, size: 32 }),
+      d.label(310, 0, "lernt daraus", { size: 32, color: c.yellow, centerY: 180 })
+    ].join("") : "",
+    step >= 2 ? [
+      d.label(905, 30, "schnelle Fortschritte", { size: 32, color: c.yellow, anchor: "middle" }),
+      d.label(1435, 30, "langsamere Fortschritte", { size: 32, color: c.gray, anchor: "middle" }),
+      d.box(660, 60, 490, 290, "Mathematik\nProgrammcode\nRätsel mit Lösung", { border: c.yellow, size: 32 }),
+      d.box(1190, 60, 490, 290, "Strategie\nVerhandlung\nkreative Arbeit", { border: c.gray, size: 32, color: c.light })
+    ].join("") : ""
+  );
+}
+put("fig-verify-train", verifyTrain(0));
+window.verifyTrainStep = (slide, step) => put("fig-verify-train", verifyTrain(step));
+
+// Prüfbarkeit, Block 3: Balken zeigen den Aufwand. Links schwer zu erzeugen, leicht zu prüfen; rechts umgekehrt.
+const asymCases = [
+  ["Tourenplan", "Milchsammelwagen für 40 Höfe", [540, "schwer: viele Reihenfolgen"], [70, "leicht: schnell nachgerechnet"]],
+  ["Zusammenfassung", "Auditbericht mit 200 Seiten", [50, "leicht: in Sekunden"], [540, "schwer: alle Seiten lesen"]]
+];
+function asymCard(x, [title, sub, make, check], hot) {
+  const row = (y, name, [w, note], color) => [
+    d.label(x, 0, name, { size: 32, color: c.light, centerY: y + 25 }),
+    `<rect x="${x + 200}" y="${y}" width="${w}" height="50" rx="6" fill="${color}"/>`,
+    d.label(x + 200, y + 105, note, { size: 32, color: c.gray })
+  ].join("");
+  return [
+    d.label(x, 50, title, { size: 48 }),
+    d.label(x, 105, sub, { size: 32, color: c.gray }),
+    row(175, "Erzeugen", make, c.gray),
+    row(345, "Prüfen", check, hot ? c.yellow : c.gray)
+  ].join("");
+}
+function verifyAsym(step) {
+  return d.svg(1680, 490,
+    asymCard(0, asymCases[0], false),
+    step >= 1 ? d.line(840, 20, 840, 470, { color: c.dark, width: 2, dashed: true }) + asymCard(900, asymCases[1], true) : ""
+  );
+}
+put("fig-verify-asym", verifyAsym(0));
+window.verifyAsymStep = (slide, step) => put("fig-verify-asym", verifyAsym(step));
 
 // Wer setzt die Schwelle? Darunter die Unterscheidung aus Block 1.
 // „zuständige Person“ 17 × 19,2 = 326 + 40 Rand < 400.
